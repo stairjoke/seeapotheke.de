@@ -26,6 +26,10 @@ Icon?
 /content
 /assets/fonts
 
+# Figma Files
+# ---------------
+/assets/Figma Exports
+
 # Kirby System
 # ---------------
 /kirby
