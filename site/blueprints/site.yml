@@ -1,5 +1,116 @@
 title: Site
 
-sections:
+tabs:
   pages:
-    type: pages
+    label: Seiten
+    icon: page
+    columns:
+      column:
+        width: 1/1
+        sections:
+          public:
+            label: Sichtbare Seiten
+            type: pages
+            status: listed
+          unlisted:
+            label: Öffentlich, aber nicht in der Navigation
+            type: pages
+            status: unlisted
+          draft:
+            label: Entwürfe (nicht öffentlich)
+            type: pages
+            status: draft
+  metadata:
+    label: Informationen
+    icon: info
+    columns:
+      column:
+        width: 1/1
+        sections:
+          globalData:
+            type: fields
+            fields:
+              hours:
+                label: Öffnungszeiten
+                type: structure
+                fields:
+                  days:
+                    label: Tage
+                    type: multiselect
+                    min: 1
+                    options:
+                      mon: "Montag"
+                      tue: "Dienstag"
+                      wed: "Mittwoch"
+                      thu: "Donnerstag"
+                      fri: "Freitag"
+                      sat: "Samstag"
+                      sun: "Sonntag"
+                  open:
+                    label: Öffnen
+                    type: time
+                    display: H:mm
+                    step: 15
+                  close:
+                    label: Schließen
+                    type: time
+                    display: H:mm
+                    step: 15
+                max: 7
+                min: 1
+                limit: 14
+  settings:
+    label: Notdienst
+    icon: wheelchair
+    columns:
+      column:
+        width: 1/1
+        sections:
+          standbyService:
+            type: fields
+            fields:
+              standbyService:
+                label: Notdienste
+                type: structure
+                help: Um alle Einträge zu löschen, klicke auf "…" rechts von "⊕ Hinzufügen" und wähle "Alle Löschen"
+                fields:
+                  start:
+                    label: Von
+                    type: date
+                    time: true
+                  end:
+                    label: Bis
+                    type: date
+                    time: true
+                  name:
+                    label: Apotheke
+                    type: text
+                  address:
+                    label: Adresse
+                    type: text
+                    help: |
+                      Vorgeschlagene Formatierung:
+                        **Straße&nbsp;Hausnummer,&nbsp;PLZ&nbsp;Ort* (Straße Leerzeichen Hausnummer Komma PLZ Leerzeichen Ort).
+                  fon:
+                    label: Telefon
+                    type: text
+                    help: |
+                      Die Telefonnumer wird auf Smartphones, iPads, Macs und manchen Windows-Computern automatisch zum anklickbaren Link, vorausgesetzt sie ist wie folgt formatiert: **08382 26866** (mit einem einfachen Leerzeichen zwischen Vorwahl und Rufnummer).
+              standbyServiceAutoUpdate:
+                label: Notdienst Update
+                help: |
+                  Zuletzt automatisch aktualisiert: {{site.StandbyServiceLastUpdate.isNotEmpty ? site.StandbyServiceLastUpdate.toDate('d.m.Y H:m') : "nie."}} [Jetzt&nbsp;aktualisieren](javascript:window.alert("Click"))
+                type: toggle
+                text:
+                  - Nicht automatisch aktualisieren
+                  - Automatisch aktualisieren
+              standbyServiceInfo:
+                when:
+                  standbyServiceAutoUpdate: true
+                label: Über automatische Notdienste
+                type: info
+                text: |
+                  Die Notdienste werden über die [XML Schnittstelle der LAK BW](https://www.lak-bw.de/notdienstportal/xml-schnittstelle.html) 14-tägig geladen und zwischengespeichert. Sollte es Änderungen am Notdienstplan der kommenden 14 Tage geben, empfiehlt es sich alle gespeicherten zu löschen.
+              standbyServiceLink:
+                label: Externe Notdienst-Seite
+                type: text
