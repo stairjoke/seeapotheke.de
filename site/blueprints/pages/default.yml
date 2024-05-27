@@ -4,18 +4,31 @@ columns:
   main:
     width: 2/3
     sections:
-      fields:
+      mainFields:
         type: fields
         fields:
-          text:
-            type: textarea
+          blocksContent:
+            label: Inhalt
+            type: blocks
             size: huge
   sidebar:
     width: 1/3
     sections:
-      pages:
-        type: pages
-        template: default
+      sidebarFields:
+        type: fields
+        fields:
+          openGraphImage:
+            label: OpenGraph Bild
+            help: Ein OpenGraph Bild wird angezeigt, wenn die Seite in sozialen Medien oder anderen Plattformen geteilt wird.
+            type: files
+            max: 1
+            layout: cards
+            image:
+              ratio: 16/9
+            uploads:
+              template: image
       files:
+        label: Dateiübersicht
+        help: Hier werden alle Dateien angezeigt, die für diese Seite hochgeladen wurden.
         type: files
 
