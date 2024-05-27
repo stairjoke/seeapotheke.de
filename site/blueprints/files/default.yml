@@ -1,1 +1,6 @@
 title: Datei
+
+accept: true
+
+options:
+  changeTemplate: true
