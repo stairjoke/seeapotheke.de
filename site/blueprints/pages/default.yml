@@ -1,4 +1,9 @@
-title: Default Page
+title: Standardseite
+
+options:
+  changeTemplate:
+    - default
+    - team
 
 columns:
   main:
