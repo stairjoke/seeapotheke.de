@@ -9,7 +9,7 @@ return [
 	'name' => 'Deutsch',
 	'url' => '/',
 	'translations' => [
-		'helloWorld' => "Hallo Welt!"
+		'openingHours' => "Öffnungszeiten"
 	]
 ];
 ?>
