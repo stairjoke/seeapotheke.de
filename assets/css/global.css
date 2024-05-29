@@ -17,11 +17,13 @@
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 
 .contain {
   max-width: var(--layout-max-width);
+  margin: 0 auto;
 }
 @media (min-width: 1024px) {
   .contain {

@@ -17,11 +17,13 @@
 
 // Page Layout Definitions
 body {
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 
 .contain {
   max-width: var(--layout-max-width);
+  margin: 0 auto;
 
   @media (min-width: #{global-sass-variables.$breakpoint-desktop-min}) {
     display: grid;
