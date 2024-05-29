@@ -3,7 +3,7 @@
 	<div class="contain">
 		<?php snippet('header') ?>
 		<main>
-			Main
+			<?= $page->blocksContent()->toBlocks() ?>
 		</main>
 	</div>
 	<?php snippet('footer') ?>
