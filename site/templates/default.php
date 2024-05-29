@@ -2,7 +2,7 @@
 <body>
 	<?php snippet('header') ?>
 	<main>
-		
+		Main
 	</main>
 	<?php snippet('footer') ?>
 </body>
