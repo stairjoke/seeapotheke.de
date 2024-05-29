@@ -1,54 +1,50 @@
 /*
- *    Global CSS Definitions for seeapotheke.de
- */
-/*
  * Page Layout Definitions for seeapotheke.de
  *
  * - Mobile Layout is more simple, going mobile first makes sense
  * - Mobile Layout using block-layout
  * - Desktop-Layout easiest with grid
  */
-/*
- * - Global CSS Variables
- */
+
+// Sass includes
+@use 'global-sass-variables';
+
+// Globally available CSS variables
 :root {
   --layout-header-height-sticky: 3.75rem;
   --layout-max-width: 80rem;
 }
 
+// Page Layout Definitions
 body {
   margin: 0 auto;
 }
 
 .contain {
   max-width: var(--layout-max-width);
-}
-@media (min-width: 1024px) {
-  .contain {
+
+  @media (min-width: #{global-sass-variables.$breakpoint-desktop-min}) {
     display: grid;
     grid-template-columns: [header-start page-start] 1fr [header-end main-start] 3fr [main-end page-end];
     gap: 0;
   }
-}
-.contain header {
-  grid-column: header;
-}
-@media (max-width: 1023px) {
-  .contain header {
-    min-height: 3.75rem;
+
+  header {
+    grid-column: header;
+
+    @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
+      min-height: 3.75rem;
+      //position: sticky;
+    }
+  }
+
+  main {
+    grid-column: main;
   }
 }
-.contain main {
-  grid-column: main;
-}
 
-footer img {
-  width: 100%;
+footer {
+  img {
+    width: 100%;
+  }
 }
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/*# sourceMappingURL=global.css.map */

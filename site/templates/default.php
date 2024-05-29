@@ -1,9 +1,11 @@
 <?php snippet('head') ?>
 <body>
-	<?php snippet('header') ?>
-	<main>
-		Main
-	</main>
+	<div class="contain">
+		<?php snippet('header') ?>
+		<main>
+			Main
+		</main>
+	</div>
 	<?php snippet('footer') ?>
 </body>
 <?php snippet('foot') ?>
