@@ -1,3 +1,8 @@
 <?php snippet('head') ?>
-<h1><?= $page->title() ?></h1>
-<?php snippet('foot') ?>
+<body>
+	<?php snippet('header') ?>
+	<main>
+		
+	</main>
+	<?php snippet('foot') ?>
+</body>
