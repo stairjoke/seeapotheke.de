@@ -7,7 +7,7 @@ if($emergencyServices = $site->standbyService()->toStructure()) :
 			<p><?= $service->address() ?></p>
 			<?php
 				if($service->fon()->isNotEmpty()){
-					echo "<p>" . $service->fon() . "</p>";
+					echo '<p>'. t('tel') . ': <a href="tel:' . $service->fon() . '">' . $service->fon() . '</p>';
 				}
 			?>
 		</article>
