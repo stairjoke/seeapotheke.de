@@ -26,9 +26,10 @@ Icon?
 /content
 /assets/fonts
 
-# Figma Files
+# Design Files
 # ---------------
 /assets/Figma Exports
+/assets/webFonts
 
 # Kirby System
 # ---------------
