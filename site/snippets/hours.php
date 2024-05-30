@@ -1,4 +1,3 @@
-<h2><?= t('openingHours') ?></h2>
 <?php
 	if($hours = $site->hours()->toStructure()) : ?>
 		<table>
