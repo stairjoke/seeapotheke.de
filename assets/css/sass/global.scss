@@ -3,10 +3,13 @@
  */
 
 // Sass includes
+// Foundation
 @use 'page-layout';
 @use 'colors';
 @use 'spacing';
 @use 'typography';
+// Elements
+@use 'header';
 
 // Global CSS rules
 img {

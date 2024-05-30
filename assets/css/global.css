@@ -152,6 +152,9 @@ p, blockquote, ul, ol {
   margin-block: var(--space-M);
 }
 
+/*
+ * Details for Header/Sidebar on seeapotheke.de
+ */
 img {
   max-width: 100%;
   height: auto;
