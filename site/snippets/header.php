@@ -12,6 +12,7 @@
 	</section>
 	<section>
 		<h3><?= $site->sidebarSectionEmergencyServices() ?></h3>
+		<?php snippet('emergencyServices') ?>
 	</section>
 	<section>
 		<h3><?= $site->sidebarSectionLegal() ?></h3>
