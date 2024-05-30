@@ -9,7 +9,7 @@
 					foreach($teamMembers as $member) : ?>
 						<h3><?= $member->headline() ?></h3>
 						<?= $member->photo()->toFile() ?>
-						<?= $member->text()->kb() ?>
+						<?= $member->text()->kt() ?>
 					<?php endforeach;
 				endif;
 			?>
