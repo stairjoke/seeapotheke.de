@@ -155,6 +155,15 @@ tabs:
                 image:
                   ratio: 2/1
                   back: white
+              sidebarSectionNavigation:
+                type: text
+                label: Titel des Navigations-Abschnitts der Seitenleiste
+              sidebarSectionEmergencyServices:
+                type: text
+                label: Titel des Notdienst-Abschnitts  der Seitenleiste
+              sidebarSectionLegal:
+                type: text
+                label: Titel des rechtlichen Abschnitts der Seitenleiste
           files:
             type: files
             label: Dateien
