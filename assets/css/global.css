@@ -101,6 +101,7 @@ h1, h2 {
   font-family: "IowanOldStyleBTProBold", ui-serif, serif;
   font-weight: bold;
   color: var(--color-CI-1);
+  letter-spacing: 0.0075em;
 }
 
 h1 {
