@@ -1,3 +1,57 @@
 /*
  *  Typographic rules for seeapotheke.de
  */
+
+body {
+  font-family: "Avenir Next", "Avenir Next LT Pro", "Avenir", "Futura", "Helvetica Neue", system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3867246, 2020-12-16T11:57:38-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: undefined by undefined
+ * URL: https://www.myfonts.comundefined
+ * Copyright: Copyright © 2024 Monotype Imaging Inc. All rights reserved.
+ *
+ * © 2024 MyFonts Inc. */
+
+
+
+@font-face {
+  font-family: "IowanOldStyleBTProBold";
+  src: url('assets/webFonts/IowanOldStyleBTProBold/font.woff2') format('woff2'), url('assets/webFonts/IowanOldStyleBTProBold/font.woff') format('woff');
+}
+
+h1, h2 {
+  font-family: "IowanOldStyleBTProBold", ui-serif, serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.125rem;
+  line-height: 1.29;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+h3, h4, h5 {
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 1.1428;
+}
+
+h5 {
+  font-weight: normal;
+}
