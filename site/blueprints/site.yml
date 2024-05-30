@@ -164,6 +164,10 @@ tabs:
               sidebarSectionLegal:
                 type: text
                 label: Titel des rechtlichen Abschnitts der Seitenleiste
+              sidebarSectionLegalPages:
+                type: pages
+                label: Seiten, die im rechtlichen Abschnitt angezeigt werden sollen
+                min: 1
           files:
             type: files
             label: Dateien
