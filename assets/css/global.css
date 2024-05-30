@@ -69,7 +69,8 @@ footer img {
   --space-XS: .25rem;
   --space-S: .375rem;
   --space-M: .5rem;
-  --space-L: 1.5;
+  --space-gap: 1rem;
+  --space-L: 1.5rem;
   --space-XL: 2rem;
 }
 
@@ -155,6 +156,15 @@ p, blockquote, ul, ol {
 /*
  * Details for Header/Sidebar on seeapotheke.de
  */
+header section {
+  padding-block: var(--space-L);
+  padding-inline: var(--space-gap);
+}
+header ol, header ul, header li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 img {
   max-width: 100%;
   height: auto;

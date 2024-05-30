@@ -2,3 +2,19 @@
  * Details for Header/Sidebar on seeapotheke.de
  */
 
+header {
+  section {
+    padding-block: var(--space-L);
+    padding-inline: var(--space-gap);
+  }
+
+  ol, ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+
+  }
+}
