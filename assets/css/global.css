@@ -53,4 +53,10 @@ img {
   height: auto;
 }
 
+pre {
+  background: black;
+  color: white;
+  padding: 1rem;
+}
+
 /*# sourceMappingURL=global.css.map */
