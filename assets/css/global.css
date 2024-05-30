@@ -140,6 +140,18 @@ h5 {
   font-weight: normal;
 }
 
+h1 {
+  margin-block: var(--space-XL) var(--space-XL);
+}
+
+h2, h3, h4, h5 {
+  margin-block: var(--space-L) var(--space-M);
+}
+
+p, blockquote, ul, ol {
+  margin-block: var(--space-M);
+}
+
 img {
   max-width: 100%;
   height: auto;

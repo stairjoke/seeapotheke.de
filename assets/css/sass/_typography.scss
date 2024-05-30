@@ -24,6 +24,8 @@
   src: url('assets/webFonts/IowanOldStyleBTProBold/font.woff2') format('woff2'), url('assets/webFonts/IowanOldStyleBTProBold/font.woff') format('woff');
 }
 
+// Font Faces and Colors
+
 body {
   font-family: "Avenir Next", "Avenir Next LT Pro", "Avenir", "Futura", "Helvetica Neue", system-ui, sans-serif;
   font-weight: 400;
@@ -66,4 +68,22 @@ h4, h5 {
 
 h5 {
   font-weight: normal;
+}
+
+
+// Typographic Rhythm
+@supports(margin-trim: block) {
+
+}
+
+h1 {
+  margin-block: var(--space-XL) var(--space-XL);
+}
+
+h2, h3, h4, h5 {
+  margin-block: var(--space-L) var(--space-M);
+}
+
+p, blockquote, ul, ol {
+  margin-block: var(--space-M);
 }
