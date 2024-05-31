@@ -101,6 +101,10 @@ p, blockquote, ul, ol {
 
 figure {
   margin-block: var(--space-M);
+
+  main &:first-child {
+    margin-block: 0 var(--space-M);
+  }
 }
 
 figcaption {
