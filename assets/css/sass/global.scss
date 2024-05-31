@@ -3,14 +3,13 @@
  */
 
 // Sass includes
-// Foundation
+// Important: Order of inclusion must remain unchanged!
 @use 'page-layout';
 @use 'variables';
+@use 'media';
 @use 'typography';
-// Elements
 @use 'header';
 @use 'links';
-@use 'media';
 
 // Global CSS rules
 img {

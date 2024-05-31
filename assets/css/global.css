@@ -84,6 +84,14 @@ body {
 }
 
 /*
+ * Media Stylesheet for seeapotheke.de
+ */
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/*
  *  Typographic rules for seeapotheke.de
  */
 /*
@@ -161,7 +169,7 @@ h2, h3, h4, h5 {
   margin-block: var(--space-L) var(--space-M);
 }
 
-p, blockquote, ul, ol {
+p, blockquote, ul, ol, figure {
   margin-block: var(--space-M);
 }
 
@@ -254,14 +262,6 @@ header nav a[href^=http]:link:not(a[href*="seeapotheke.de"], a[href*=localhost])
 }
 header nav a[href^=http]:focus-visible:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
   background-color: var(--color-CI-1);
-}
-
-/*
- * Media Stylesheet for seeapotheke.de
- */
-figure {
-  margin: 0;
-  padding: 0;
 }
 
 img {
