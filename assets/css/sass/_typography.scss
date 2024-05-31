@@ -33,9 +33,13 @@ body {
   color: var(--color-body-text);
 }
 
-strong, b, em {
+strong, b {
   color: var(--color-body-text-emphasized);
   font-weight: 600;
+}
+
+em {
+  font-style: italic;
 }
 
 h1, h2 {
