@@ -1,0 +1,36 @@
+name: Karte und Information — Layout
+icon: map
+preview: fields
+tabs:
+  info:
+    icon: info
+    label: Kundeninformation
+    fields:
+      blocksContent:
+        label: Inhalt
+        type: blocks
+        fieldsets:
+          - heading
+          - text
+          - image
+          - quote
+          - list
+  map:
+    icon: map
+    label: Karte/Anfahrt
+    fields:
+      image:
+        type: files
+        template: image
+        max: 1
+        layout: cards
+      links:
+        type: structure
+        label: Links
+        fields:
+          url:
+            type: url
+            label: Web-Adresse
+          text:
+            type: text
+            label: Link-Text
