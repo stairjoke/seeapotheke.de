@@ -205,7 +205,7 @@ header nav a[href^=http]:not(a[href*="seeapotheke.de"], a[href*=localhost]) span
   mask-image: url("/assets/icon-external-link.svg");
   background-color: var(--color-body-text);
 }
-header nav a[href^=http]:active:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a[href^=http]:hover:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a[href^=http]:focus:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
+header nav a[href^=http]:link:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a[href^=http]:active:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a[href^=http]:hover:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a[href^=http]:focus:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
   background-color: var(--color-body-text-inverted);
 }
 header nav a[href^=http]:focus-visible:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
@@ -226,11 +226,20 @@ main a[href^=http]:not(a[href*="seeapotheke.de"], a[href*=localhost])::after {
   mask-image: url("/assets/icon-external-link.svg");
   background-color: var(--color-body-text);
 }
-main a[href^=http]:link:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, main a[href^=http]:active:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, main a[href^=http]:hover:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, main a[href^=http]:focus:not(a[href*="seeapotheke.de"], a[href*=localhost])::after {
+main a[href^=http]:link:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, main a[href^=http]:visited:not(a[href*="seeapotheke.de"], a[href*=localhost])::after {
   background-color: var(--color-CI-1);
 }
-main a[href^=http]:focus-visible:not(a[href*="seeapotheke.de"], a[href*=localhost])::after {
+main a[href^=http]:active, main a[href^=http]:hover, main a[href^=http]:focus, main a[href^=http]:focus-visible {
+  color: var(--color-CI-2);
+}
+main a[href^=http]:active:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, main a[href^=http]:hover:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, main a[href^=http]:focus:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, main a[href^=http]:focus-visible:not(a[href*="seeapotheke.de"], a[href*=localhost])::after {
   background-color: var(--color-CI-2);
+}
+main a:link, main a:visited {
+  color: var(--color-CI-1);
+}
+main a:active, main a:hover, main a:focus, main a:focus-visible {
+  color: var(--color-CI-2);
 }
 
 img {
