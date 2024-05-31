@@ -1,0 +1,27 @@
+name: Hervorgehobener Block
+icon: grid-full
+preview: fields
+tabs:
+  content:
+    label: Block
+    icon: grid-full
+    fields:
+      alignment:
+        type: toggles
+        label: Ausrichtung
+        default: right
+        options:
+          - value: left
+            text: Links
+            icon: angle-left
+          - value: none
+            text: Volle Breite
+            icon: grid-top
+          - value: right
+            text: Rechts
+            icon: angle-right
+      blocksContent:
+        type: blocks
+        label: Inhalt
+        fieldsets:
+          - heading
