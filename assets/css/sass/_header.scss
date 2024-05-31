@@ -3,9 +3,20 @@
  */
 
 header {
+  border-right: var(--color-lines) solid var(--line-hair);
+
   section {
     padding-block: var(--space-L);
     padding-inline: var(--space-gap);
+    border-bottom: var(--color-lines) solid var(--line-hair);
+
+    article:first-child > *:first-child {
+      margin-top: 0;
+    }
+
+    article:last-child > *:last-child {
+      margin-bottom: 0;
+    }
   }
 
   ol, ul, li {
