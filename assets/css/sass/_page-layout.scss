@@ -44,22 +44,20 @@ body {
 
   main {
     grid-column: main;
-    display: grid;
-    grid-template-columns: [plus-start] 1fr [content-start] 4fr [content-end] 1fr [plus-end];
 
     @media (max-width: #{global-sass-variables.$breakpoint-tablet-max}) {
-      display: block;
-
       & > *:not(figure, img) {
         padding-block: var(--space-L);
       }
     }
 
     & > *:not(figure, img) {
-      grid-column: content;
+      max-width: 66.667%;
+      margin-left: auto;
+      margin-right: auto;
     }
     & > figure, & > img {
-      grid-column: plus;
+      width: 100%;
     }
   }
 }
