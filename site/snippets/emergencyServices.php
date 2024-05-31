@@ -7,10 +7,23 @@ if($emergencyServices = $site->standbyService()->toStructure()) :
 			<p><?= $service->address() ?></p>
 			<?php
 				if($service->fon()->isNotEmpty()){
-					echo '<p>'. t('tel') . ': <a href="tel:' . $service->fon() . '">' . $service->fon() . '</p>';
+					echo '<p>'. t('tel') . ': <a href="tel:' . $service->fon() . '">' . $service->fon() . '</a></p>';
 				}
 			?>
 		</article>
 	<?php endforeach;
+	if($externalServices = $site->standbyServiceLink()->toStructure()) : ?>
+		<nav>
+			<ol>
+				<?php foreach($externalServices as $externalServiceItem): ?>
+				<li>
+					<a href="<?= $externalServiceItem->url() ?>">
+						<span class="label"><?= $externalServiceItem->text() ?></span>
+					</a>
+				</li>
+				<?php endforeach; ?>
+			</ol>
+		</nav>
+	<?php endif;
 endif;
 ?>

@@ -110,8 +110,15 @@ tabs:
                 text: |
                   Die Notdienste werden über die [XML Schnittstelle der LAK BW](https://www.lak-bw.de/notdienstportal/xml-schnittstelle.html) 14-tägig geladen und zwischengespeichert. Sollte es Änderungen am Notdienstplan der kommenden 14 Tage geben, empfiehlt es sich alle gespeicherten zu löschen.
               standbyServiceLink:
-                label: Externe Notdienst-Seite
-                type: text
+                label: Externe Notdienst-Seite(n)
+                type: structure
+                fields:
+                  url:
+                    type: url
+                    label: Adresse
+                  text:
+                    type: text
+                    label: Beschriftung
   advanced:
     label: Erweiterte Einstellungen
     icon: settings
