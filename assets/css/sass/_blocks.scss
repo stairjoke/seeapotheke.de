@@ -1,28 +1,28 @@
 /*
  * Styles for custom blocks in Kirby theme for seeapotheke.de
  */
- 
+
  @use 'global-sass-variables';
 
 .block_map-and-message {
-	grid-column: plus !important;
+	max-width: 100% !important;
 	display: flex;
 	@media (max-width: #{global-sass-variables.$breakpoint-phone-max}){
 		flex-direction: column;
 	}
 	gap: 0;
-	
+
 	margin-block: var(--space-M);
 	main figure~& {
 		margin-block: calc(var(--space-M) * (-1)) var(--space-M);
 	}
-	
+
 	article {
 		order: 1;
 		flex-basis: 50%;
 		min-height: 200px;
 		padding: var(--space-gap);
-		
+
 		background-size: cover;
 		background-position: center center;
 		border-bottom: var(--color-lines) solid var(--line-hair);
@@ -32,7 +32,7 @@
 .block_map-and-message_map {
 	order: 2;
 	position: relative;
-	
+
 	ul, li {
 		margin: 0;
 		padding: 0;
@@ -41,11 +41,68 @@
 	ul {
 		position: absolute;
 		inset: var(--space-gap);
-		
+
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		gap: var(--space-gap);
 		justify-content: center;
 	}
+}
+
+.block_floating {
+  padding: var(--space-gap);
+  border-radius: var(--radius-L);
+
+  background-color: var(--color-CI-1);
+  color: var(--color-body-text-inverted);
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-body-text-inverted);
+    &:first-child {
+      margin-block-start: 0;
+    }
+  }
+
+  a[href^="http"]:not(nav a) {
+    &:not(a[href*="seeapotheke.de"], a[href*="localhost"])::after {
+      background-color: var(--color-body-text-inverted);
+    }
+
+    &:link, &:visited {
+      &:not(a[href*="seeapotheke.de"], a[href*="localhost"])::after {
+        background-color: var(--color-body-text-inverted);
+      }
+    }
+
+    &:active, &:hover, &:focus, &:focus-visible {
+      &:not(a[href*="seeapotheke.de"], a[href*="localhost"])::after {
+        background-color: var(--color-CI-2);
+      }
+    }
+  }
+
+  a {
+    &:link, &:visited {
+      color: var(--color-body-text-inverted);
+    }
+
+    &:active, &:hover, &:focus, &:focus-visible {
+      color: var(--color-CI-2);
+    }
+  }
+
+  &.left {
+    float: left;
+    width: 25%;
+    margin: 0 var(--space-gap) var(--space-gap) 16.667%;
+  }
+  &.none {
+    margin-block: var(--space-M);
+  }
+  &.right {
+    float: right;
+    width: 25%;
+    margin: 0 16.667% var(--space-gap) var(--space-gap);
+  }
 }
