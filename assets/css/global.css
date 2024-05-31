@@ -50,20 +50,7 @@ footer img {
 }
 
 /*
- * Color Variables for seeapotheke.de
- */
-:root {
-  --color-CI-1: #1E398F;
-  --color-CI-2: #E30018;
-  --color-lines: #E8E9ED;
-  --color-paper: #FBFCFE;
-  --color-body-text: #3D3D3D;
-  --color-body-text-dimmed: #666666;
-  --color-body-text-emphasized: #000000;
-}
-
-/*
- * Spacing for seeapotheke.de
+ * Global Custom Properties for seeapotheke.de
  */
 :root {
   --space-XS: .25rem;
@@ -72,6 +59,16 @@ footer img {
   --space-gap: 1rem;
   --space-L: 1.5rem;
   --space-XL: 2rem;
+  --radius-M: .5rem;
+  --color-CI-1: #1E398F;
+  --color-CI-2: #E30018;
+  --color-lines: #E8E9ED;
+  --color-paper: #FBFCFE;
+  --color-selected: #E8E9ED;
+  --color-body-text: #3D3D3D;
+  --color-body-text-dimmed: #666666;
+  --color-body-text-emphasized: #000000;
+  --color-body-text-inverted: #F5F5F5;
 }
 
 /*
@@ -165,6 +162,33 @@ header ol, header ul, header li {
   margin: 0;
   padding: 0;
 }
+header nav {
+  margin-inline: calc(var(--space-M) * -1);
+}
+header nav a {
+  display: block;
+  padding: var(--space-XS) var(--space-M);
+  text-decoration: none;
+  border-radius: var(--radius-M);
+  background: transparent;
+  transition-property: background, color;
+  transition-duration: 250ms;
+  transition-timing-function: ease-out;
+}
+header nav a:link, header nav a:visited {
+  color: var(--color-body-text);
+}
+header nav a:active, header nav a:hover, header nav a:focus {
+  color: var(--color-paper);
+  background: var(--color-CI-1);
+  transition-property: none;
+}
+header nav a:focus-visible {
+  color: var(--color-CI-1);
+  background: var(--color-selected);
+  outline: solid 2px var(--color-CI-2);
+}
+
 img {
   max-width: 100%;
   height: auto;

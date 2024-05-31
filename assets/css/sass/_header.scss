@@ -14,7 +14,33 @@ header {
     padding: 0;
   }
 
-  a {
+  nav {
+    margin-inline: calc(var(--space-M) * (-1));
 
+    a {
+      display: block;
+      padding: var(--space-XS) var(--space-M);
+      text-decoration: none;
+      border-radius: var(--radius-M);
+      background: transparent;
+
+      transition-property: background, color;
+      transition-duration: 250ms;
+      transition-timing-function: ease-out;
+
+      &:link, &:visited {
+        color: var(--color-body-text);
+      }
+      &:active, &:hover, &:focus {
+        color: var(--color-paper);
+        background: var(--color-CI-1);
+        transition-property: none;
+      }
+      &:focus-visible {
+        color: var(--color-CI-1);
+        background: var(--color-selected);
+        outline: solid 2px var(--color-CI-2);
+      }
+    }
   }
 }
