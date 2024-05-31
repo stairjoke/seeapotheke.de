@@ -23,6 +23,7 @@ body {
 }
 
 .contain {
+  border-right: var(--color-lines) solid var(--line-hair);
   max-width: var(--layout-max-width);
   margin: 0 auto;
 }
@@ -127,6 +128,14 @@ body {
   color: var(--color-body-text);
 }
 
+figcaption {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: var(--color-body-text-dimmed);
+  font-weight: 400;
+  text-align: center;
+}
+
 strong, b {
   color: var(--color-body-text-emphasized);
   font-weight: 600;
@@ -175,8 +184,16 @@ h2, h3, h4, h5 {
   margin-block: var(--space-L) var(--space-M);
 }
 
-p, blockquote, ul, ol, figure {
+p, blockquote, ul, ol {
   margin-block: var(--space-M);
+}
+
+figure {
+  margin-block: var(--space-M);
+}
+
+figcaption {
+  margin-block-end: var(--space-L);
 }
 
 /*
@@ -184,6 +201,7 @@ p, blockquote, ul, ol, figure {
  */
 header {
   border-right: var(--color-lines) solid var(--line-hair);
+  border-left: var(--color-lines) solid var(--line-hair);
 }
 header section {
   padding-block: var(--space-L);
