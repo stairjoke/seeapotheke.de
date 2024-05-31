@@ -2,6 +2,48 @@
  * Link Styles for seeapotheke.de
  */
 
+a[href^="http"]:not(nav a) {
+  &:not(a[href*="seeapotheke.de"], a[href*="localhost"])::after {
+    display: inline-block;
+    content: "Externer Link";
+    overflow: hidden;
+    color: transparent;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: baseline;
+    transform: translateY(.17rem);
+    margin-inline-start: var(--space-S);
+
+    -webkit-mask-image: url('/assets/icon-external-link.svg');
+    mask-image: url('/assets/icon-external-link.svg');
+
+    background-color: var(--color-body-text);
+  }
+
+  &:link, &:visited {
+    &:not(a[href*="seeapotheke.de"], a[href*="localhost"])::after {
+      background-color: var(--color-CI-1);
+    }
+  }
+
+  &:active, &:hover, &:focus, &:focus-visible {
+    &:not(a[href*="seeapotheke.de"], a[href*="localhost"])::after {
+      background-color: var(--color-CI-2);
+    }
+  }
+}
+
+a {
+  &:link, &:visited {
+    color: var(--color-CI-1);
+  }
+
+  &:active, &:hover, &:focus, &:focus-visible {
+    color: var(--color-CI-2);
+  }
+}
+
+
 header nav {
   a[href^="http"] {
     &:not(a[href*="seeapotheke.de"], a[href*="localhost"]) {
@@ -22,59 +64,17 @@ header nav {
         background-color: var(--color-body-text);
       }
     }
+
     &:link, &:active, &:hover, &:focus {
       &:not(a[href*="seeapotheke.de"], a[href*="localhost"]) span::after {
         background-color: var(--color-body-text-inverted);
       }
     }
+
     &:focus-visible {
       &:not(a[href*="seeapotheke.de"], a[href*="localhost"]) span::after {
         background-color: var(--color-CI-1);
       }
-    }
-  }
-}
-
-main {
-  a[href^="http"] {
-    &:not(a[href*="seeapotheke.de"], a[href*="localhost"])::after {
-      display: inline-block;
-      content: "Externer Link";
-      overflow: hidden;
-      color: transparent;
-      width: 1rem;
-      height: 1rem;
-      vertical-align: baseline;
-      transform: translateY(.17rem);
-      margin-inline-start: var(--space-S);
-
-      -webkit-mask-image: url('/assets/icon-external-link.svg');
-      mask-image: url('/assets/icon-external-link.svg');
-
-      background-color: var(--color-body-text);
-    }
-
-    &:link, &:visited {
-      &:not(a[href*="seeapotheke.de"], a[href*="localhost"])::after {
-        background-color: var(--color-CI-1);
-      }
-    }
-
-    &:active, &:hover, &:focus, &:focus-visible {
-      color: var(--color-CI-2);
-
-      &:not(a[href*="seeapotheke.de"], a[href*="localhost"])::after {
-        background-color: var(--color-CI-2);
-      }
-    }
-  }
-
-  a {
-    &:link, &:visited {
-      color: var(--color-CI-1);
-    }
-    &:active, &:hover, &:focus, &:focus-visible {
-      color: var(--color-CI-2);
     }
   }
 }
