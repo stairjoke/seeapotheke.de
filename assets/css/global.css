@@ -97,6 +97,9 @@ figure {
   margin: 0;
   padding: 0;
 }
+figure img {
+  display: block;
+}
 
 /*
  *  Typographic rules for seeapotheke.de
@@ -190,6 +193,9 @@ p, blockquote, ul, ol {
 
 figure {
   margin-block: var(--space-M);
+}
+main figure:first-child {
+  margin-block: 0 var(--space-M);
 }
 
 figcaption {
@@ -296,6 +302,52 @@ header nav a[href^=http]:link:not(a[href*="seeapotheke.de"], a[href*=localhost])
 }
 header nav a[href^=http]:focus-visible:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
   background-color: var(--color-CI-1);
+}
+
+/*
+ * Styles for custom blocks in Kirby theme for seeapotheke.de
+ */
+.block_map-and-message {
+  grid-column: plus !important;
+  display: flex;
+  gap: 0;
+  margin-block: var(--space-M);
+}
+@media (max-width: 639px) {
+  .block_map-and-message {
+    flex-direction: column;
+  }
+}
+main figure ~ .block_map-and-message {
+  margin-block: calc(var(--space-M) * -1) var(--space-M);
+}
+.block_map-and-message article {
+  order: 1;
+  flex-basis: 50%;
+  min-height: 200px;
+  padding: var(--space-gap);
+  background-size: cover;
+  background-position: center center;
+  border-bottom: var(--color-lines) solid var(--line-hair);
+}
+
+.block_map-and-message_map {
+  order: 2;
+  position: relative;
+}
+.block_map-and-message_map ul, .block_map-and-message_map li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.block_map-and-message_map ul {
+  position: absolute;
+  inset: var(--space-gap);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-gap);
+  justify-content: center;
 }
 
 img {

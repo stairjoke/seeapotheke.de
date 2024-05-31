@@ -1,0 +1,51 @@
+/*
+ * Styles for custom blocks in Kirby theme for seeapotheke.de
+ */
+ 
+ @use 'global-sass-variables';
+
+.block_map-and-message {
+	grid-column: plus !important;
+	display: flex;
+	@media (max-width: #{global-sass-variables.$breakpoint-phone-max}){
+		flex-direction: column;
+	}
+	gap: 0;
+	
+	margin-block: var(--space-M);
+	main figure~& {
+		margin-block: calc(var(--space-M) * (-1)) var(--space-M);
+	}
+	
+	article {
+		order: 1;
+		flex-basis: 50%;
+		min-height: 200px;
+		padding: var(--space-gap);
+		
+		background-size: cover;
+		background-position: center center;
+		border-bottom: var(--color-lines) solid var(--line-hair);
+	}
+}
+
+.block_map-and-message_map {
+	order: 2;
+	position: relative;
+	
+	ul, li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	ul {
+		position: absolute;
+		inset: var(--space-gap);
+		
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: var(--space-gap);
+		justify-content: center;
+	}
+}
