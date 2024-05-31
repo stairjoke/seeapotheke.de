@@ -22,6 +22,8 @@ body {
 }
 
 .contain {
+  border-right: var(--color-lines) solid var(--line-hair);
+
   max-width: var(--layout-max-width);
   margin: 0 auto;
 
