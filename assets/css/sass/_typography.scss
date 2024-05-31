@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: "IowanOldStyleBTProBold";
-  src: url('assets/webFonts/IowanOldStyleBTProBold/font.woff2') format('woff2'), url('assets/webFonts/IowanOldStyleBTProBold/font.woff') format('woff');
+  src: url('/assets/webFonts/IowanOldStyleBTProBold/font.woff2') format('woff2'), url('/assets/webFonts/IowanOldStyleBTProBold/font.woff') format('woff');
 }
 
 // Font Faces and Colors
@@ -42,7 +42,6 @@ h1, h2 {
   font-family: "IowanOldStyleBTProBold", ui-serif, serif;
   font-weight: bold;
   color: var(--color-CI-1);
-  letter-spacing: .0075em;
 }
 
 h1 {
