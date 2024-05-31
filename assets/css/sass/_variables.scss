@@ -2,26 +2,32 @@
  * Global Custom Properties for seeapotheke.de
  */
 
- :root {
+:root {
 // Spacing
-   --space-XS: .25rem;
-   --space-S: .375rem;
-   --space-M: .5rem;
-   --space-gap: 1rem;
-   --space-L: 1.5rem;
-   --space-XL: 2rem;
+  --space-XS: .25rem;
+  --space-S: .375rem;
+  --space-M: .5rem;
+  --space-gap: 1rem;
+  --space-L: 1.5rem;
+  --space-XL: 2rem;
 
 // Radii
   --radius-M: .5rem;
 
 // Colors
-   --color-CI-1: #1E398F;
-   --color-CI-2: #E30018;
-   --color-lines: #E8E9ED;
-   --color-paper: #FBFCFE;
-   --color-selected: #E8E9ED;
-   --color-body-text: #3D3D3D;
-   --color-body-text-dimmed: #666666;
-   --color-body-text-emphasized: #000000;
-   --color-body-text-inverted: #F5F5F5;
- }
+  --color-CI-1: #1E398F;
+  --color-CI-2: #E30018;
+  --color-lines: #E8E9ED;
+  --color-paper: #FBFCFE;
+  --color-selected: #E8E9ED;
+  --color-body-text: #3D3D3D;
+  --color-body-text-dimmed: #666666;
+  --color-body-text-emphasized: #000000;
+  --color-body-text-inverted: #F5F5F5;
+
+// Lines
+  --line-hair: 1px;
+  @media (min-resolution: 150dpi) {
+    --line-hair: .5px;
+  }
+}
