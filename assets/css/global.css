@@ -92,7 +92,7 @@ footer img {
  */
 @font-face {
   font-family: "IowanOldStyleBTProBold";
-  src: url("assets/webFonts/IowanOldStyleBTProBold/font.woff2") format("woff2"), url("assets/webFonts/IowanOldStyleBTProBold/font.woff") format("woff");
+  src: url("/assets/webFonts/IowanOldStyleBTProBold/font.woff2") format("woff2"), url("/assets/webFonts/IowanOldStyleBTProBold/font.woff") format("woff");
 }
 body {
   font-family: "Avenir Next", "Avenir Next LT Pro", "Avenir", "Futura", "Helvetica Neue", system-ui, sans-serif;
@@ -110,7 +110,6 @@ h1, h2 {
   font-family: "IowanOldStyleBTProBold", ui-serif, serif;
   font-weight: bold;
   color: var(--color-CI-1);
-  letter-spacing: 0.0075em;
 }
 
 h1 {
@@ -192,7 +191,7 @@ header nav a:focus-visible {
 /*
  * Link Styles for seeapotheke.de
  */
-header nav a:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
+header nav a[href^=http]:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
   display: inline-block;
   content: "Externer Link";
   overflow: hidden;
@@ -206,11 +205,32 @@ header nav a:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
   mask-image: url("/assets/icon-external-link.svg");
   background-color: var(--color-body-text);
 }
-header nav a:active:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a:hover:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a:focus:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
+header nav a[href^=http]:active:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a[href^=http]:hover:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a[href^=http]:focus:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
   background-color: var(--color-body-text-inverted);
 }
-header nav a:focus-visible:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
+header nav a[href^=http]:focus-visible:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
   background-color: var(--color-CI-1);
+}
+
+main a[href^=http]:not(a[href*="seeapotheke.de"], a[href*=localhost])::after {
+  display: inline-block;
+  content: "Externer Link";
+  overflow: hidden;
+  color: transparent;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: baseline;
+  transform: translateY(0.17rem);
+  margin-inline-start: var(--space-S);
+  -webkit-mask-image: url("/assets/icon-external-link.svg");
+  mask-image: url("/assets/icon-external-link.svg");
+  background-color: var(--color-body-text);
+}
+main a[href^=http]:link:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, main a[href^=http]:active:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, main a[href^=http]:hover:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, main a[href^=http]:focus:not(a[href*="seeapotheke.de"], a[href*=localhost])::after {
+  background-color: var(--color-CI-1);
+}
+main a[href^=http]:focus-visible:not(a[href*="seeapotheke.de"], a[href*=localhost])::after {
+  background-color: var(--color-CI-2);
 }
 
 img {
