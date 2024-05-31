@@ -10,10 +10,11 @@
 // Elements
 @use 'header';
 @use 'links';
+@use 'media';
 
 // Global CSS rules
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 

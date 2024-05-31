@@ -43,10 +43,22 @@ body {
 }
 .contain main {
   grid-column: main;
+  display: grid;
+  grid-template-columns: [plus-start] 1fr [content-start] 4fr [content-end] 1fr [plus-end];
 }
-
-footer img {
-  width: 100%;
+@media (max-width: 959px) {
+  .contain main {
+    display: block;
+  }
+  .contain main > *:not(figure, img) {
+    padding-block: var(--space-L);
+  }
+}
+.contain main > *:not(figure, img) {
+  grid-column: content;
+}
+.contain main > figure, .contain main > img {
+  grid-column: plus;
 }
 
 /*
@@ -240,8 +252,11 @@ header nav a[href^=http]:focus-visible:not(a[href*="seeapotheke.de"], a[href*=lo
   background-color: var(--color-CI-1);
 }
 
+/*
+ * Media Stylesheet for seeapotheke.de
+ */
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
