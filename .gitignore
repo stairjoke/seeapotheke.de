@@ -4,6 +4,7 @@
 Icon
 Icon?
 .DS_Store
+!**/icons
 
 # Temporary files
 # ---------------
