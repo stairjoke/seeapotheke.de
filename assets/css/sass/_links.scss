@@ -14,8 +14,8 @@ a[href^="http"]:not(nav a) {
     transform: translateY(.17rem);
     margin-inline-start: var(--space-S);
 
-    -webkit-mask-image: url('/assets/icon-external-link.svg');
-    mask-image: url('/assets/icon-external-link.svg');
+    -webkit-mask-image: url('/assets/icons/external-link.svg');
+    mask-image: url('/assets/icons/external-link.svg');
 
     background-color: var(--color-body-text);
   }
@@ -58,8 +58,8 @@ header nav {
         transform: translateY(.17rem);
         margin-inline-start: var(--space-S);
 
-        -webkit-mask-image: url('/assets/icon-external-link.svg');
-        mask-image: url('/assets/icon-external-link.svg');
+        -webkit-mask-image: url('/assets/icons/external-link.svg');
+        mask-image: url('/assets/icons/external-link.svg');
 
         background-color: var(--color-body-text);
       }

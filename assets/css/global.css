@@ -263,8 +263,8 @@ a[href^=http]:not(nav a):not(a[href*="seeapotheke.de"], a[href*=localhost])::aft
   vertical-align: baseline;
   transform: translateY(0.17rem);
   margin-inline-start: var(--space-S);
-  -webkit-mask-image: url("/assets/icon-external-link.svg");
-  mask-image: url("/assets/icon-external-link.svg");
+  -webkit-mask-image: url("/assets/icons/external-link.svg");
+  mask-image: url("/assets/icons/external-link.svg");
   background-color: var(--color-body-text);
 }
 a[href^=http]:not(nav a):link:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, a[href^=http]:not(nav a):visited:not(a[href*="seeapotheke.de"], a[href*=localhost])::after {
@@ -291,8 +291,8 @@ header nav a[href^=http]:not(a[href*="seeapotheke.de"], a[href*=localhost]) span
   vertical-align: baseline;
   transform: translateY(0.17rem);
   margin-inline-start: var(--space-S);
-  -webkit-mask-image: url("/assets/icon-external-link.svg");
-  mask-image: url("/assets/icon-external-link.svg");
+  -webkit-mask-image: url("/assets/icons/external-link.svg");
+  mask-image: url("/assets/icons/external-link.svg");
   background-color: var(--color-body-text);
 }
 header nav a[href^=http]:link:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a[href^=http]:active:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a[href^=http]:hover:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a[href^=http]:focus:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
