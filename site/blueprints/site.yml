@@ -119,6 +119,29 @@ tabs:
                   text:
                     type: text
                     label: Beschriftung
+  navPreferences:
+    label: Navigations-Einstellungen
+    icon: menu
+    columns:
+      column:
+        width: 1/1
+        sections:
+          navigationFields:
+            type: fields
+            fields:
+              sidebarSectionNavigation:
+                type: text
+                label: Titel des Navigations-Abschnitts der Seitenleiste
+              sidebarSectionEmergencyServices:
+                type: text
+                label: Titel des Notdienst-Abschnitts  der Seitenleiste
+              sidebarSectionLegal:
+                type: text
+                label: Titel des rechtlichen Abschnitts der Seitenleiste
+              sidebarSectionLegalPages:
+                type: pages
+                label: Seiten, die im rechtlichen Abschnitt angezeigt werden sollen
+                min: 1
   advanced:
     label: Erweiterte Einstellungen
     icon: settings
@@ -162,21 +185,20 @@ tabs:
                 image:
                   ratio: 2/1
                   back: white
-              sidebarSectionNavigation:
-                type: text
-                label: Titel des Navigations-Abschnitts der Seitenleiste
-              sidebarSectionEmergencyServices:
-                type: text
-                label: Titel des Notdienst-Abschnitts  der Seitenleiste
-              sidebarSectionLegal:
-                type: text
-                label: Titel des rechtlichen Abschnitts der Seitenleiste
-              sidebarSectionLegalPages:
-                type: pages
-                label: Seiten, die im rechtlichen Abschnitt angezeigt werden sollen
-                min: 1
+              icons:
+                type: files
+                label: Seitenweit genutzte Ikonen
+                help: |
+                  Ikonen müssen 16x16px SVG dateien sein. Die farbe spielt keine Rolle, da sie als Maske genutzt werden und sich farblich an ihre Umgebung anpassen.
+                layout: cards
+                size: small
+                uploads:
+                  template: icon
+                image:
+                  ratio: 1/1
+                  back: white
           files:
             type: files
-            label: Dateien
+            label: Alle Dateien
             help: |
               Hier erscheinen alle Dateien, die nicht für eine bestimmte Seite, sondern generell hochgeladen wurden.

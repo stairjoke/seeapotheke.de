@@ -1,0 +1,12 @@
+title: SVG Ikone
+
+accept:
+  mime: image/svg+xml
+
+options:
+  changeTemplate: true
+
+fields:
+  alt:
+    label: Alternativtext
+    type: text
