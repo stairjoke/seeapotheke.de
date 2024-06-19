@@ -41,15 +41,15 @@ header {
       transition-timing-function: ease-out;
 
       &:link, &:visited {
-        color: var(--color-body-text);
+        --text-color: var(--color-body-text);
       }
       &:active, &:hover, &:focus {
-        color: var(--color-body-text-inverted);
+        --text-color: var(--color-body-text-inverted);
         background: var(--color-CI-1);
         transition-property: none;
       }
       &:focus-visible {
-        color: var(--color-CI-1);
+        --text-color: var(--color-CI-1);
         background: var(--color-selected);
         outline: solid 2px var(--color-CI-2);
       }

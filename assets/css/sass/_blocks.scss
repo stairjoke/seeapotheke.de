@@ -55,10 +55,10 @@
   border-radius: var(--radius-L);
 
   background-color: var(--color-CI-1);
-  color: var(--color-body-text-inverted);
+  --text-color: var(--color-body-text-inverted);
 
   h1, h2, h3, h4, h5, h6 {
-    color: var(--color-body-text-inverted);
+    --text-color: var(--color-body-text-inverted);
     &:first-child {
       margin-block-start: 0;
     }
@@ -84,11 +84,11 @@
 
   a {
     &:link, &:visited {
-      color: var(--color-body-text-inverted);
+      --text-color: var(--color-body-text-inverted);
     }
 
     &:active, &:hover, &:focus, &:focus-visible {
-      color: var(--color-CI-2);
+      --text-color: var(--color-CI-2);
     }
   }
 
