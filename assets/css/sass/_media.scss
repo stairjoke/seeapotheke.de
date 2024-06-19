@@ -10,3 +10,19 @@ figure {
     display: block;
   }
 }
+
+img.icon, svg.icon {
+  display: inline-block;
+  width: auto;
+  height: 1em;
+}
+
+span.icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  color: transparent;
+  background-color: var(--text-color);
+  -webkit-mask-image: var(--mask-url); //Can’t use `--data-url=""` with `attr(data-url url)`, it’s not supported yet.
+  mask-image: var(--mask-url);
+}
