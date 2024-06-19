@@ -26,3 +26,7 @@ span.icon {
   -webkit-mask-image: var(--mask-url); //Can’t use `--data-url=""` with `attr(data-url url)`, it’s not supported yet.
   mask-image: var(--mask-url);
 }
+
+.icon {
+  transform: translateY(.2em);
+}
