@@ -1,0 +1,36 @@
+name: Button
+icon: bolt
+tabs:
+  content:
+    label: Button
+    icon: bolt
+    fields:
+      icon:
+        type: files
+        label: Ikone
+        width: 1/2
+        max: 1
+        query: site.icons.toFiles
+        image:
+          ratio: 1/1
+          back: white
+      direction:
+        type: toggles
+        label: Position der Ikone
+        width: 1/2
+        default: left
+        options:
+          - value: left
+            text: Links
+            icon: angle-left
+          - value: right
+            text: Rechts
+            icon: angle-right
+      action:
+        type: link
+        label: Aktion
+        width: 1/2
+      text:
+        type: text
+        label: Beschriftung
+        width: 1/2

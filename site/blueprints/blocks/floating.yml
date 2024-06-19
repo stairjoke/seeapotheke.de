@@ -25,3 +25,5 @@ tabs:
         label: Inhalt
         fieldsets:
           - heading
+          - button
+          - text
