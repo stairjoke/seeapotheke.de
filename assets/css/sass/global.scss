@@ -11,6 +11,7 @@
 @use 'header';
 @use 'links';
 @use 'blocks';
+@use 'buttons';
 
 // Global CSS rules
 img {
@@ -20,6 +21,6 @@ img {
 
 pre {
   background: black;
-  color: white;
+  --text-color: white;
   padding: 1rem;
 }

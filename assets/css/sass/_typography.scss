@@ -101,7 +101,7 @@ p, blockquote, ul, ol {
   margin-block: var(--space-M);
 }
 
-figure {
+figure, a[role=button], div.button {
   margin-block: var(--space-M);
 
   main &:first-child {

@@ -1,0 +1,39 @@
+/*
+ * Styles for Button elements — seeapotheke.de
+ */
+
+ body {
+   --button-background: var(--color-CI-1);
+   --button-background-hover: var(--color-CI-3);
+ }
+
+a[role=button], div.button {
+  --text-color: var(--color-body-text-inverted) !important;
+
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  gap: var(--space-XS);
+
+  text-align: center;
+  text-decoration: none;
+
+  padding: var(--space-XS);
+  margin-block: var(--space-S);
+  background: var(--button-background);
+  border-radius: var(--radius-M);
+
+  &:hover, &:focus, &:active {
+    background: var(--button-background-hover);
+  }
+
+  span.label {
+    order: 2;
+  }
+  span.left {
+    order: 1;
+  }
+  span.right {
+    order: 3;
+  }
+}

@@ -72,7 +72,9 @@ body {
   --radius-M: .5rem;
   --radius-L: 1rem;
   --color-CI-1: #1E398F;
+  --color-CI-1-plus-10: #3C59B4;
   --color-CI-2: #E30018;
+  --color-CI-3: #007a3b;
   --color-lines: #E8E9ED;
   --color-paper: #FBFCFE;
   --color-selected: #E8E9ED;
@@ -99,6 +101,26 @@ figure img {
   display: block;
 }
 
+img.icon, svg.icon {
+  display: inline-block;
+  width: auto;
+  height: 1em;
+}
+
+span.icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  color: transparent;
+  background-color: var(--text-color);
+  -webkit-mask-image: var(--mask-url);
+  mask-image: var(--mask-url);
+}
+
+.icon {
+  transform: translateY(0.2em);
+}
+
 /*
  *  Typographic rules for seeapotheke.de
  */
@@ -122,23 +144,27 @@ figure img {
   font-family: "IowanOldStyleBTProBold";
   src: url("/assets/webFonts/IowanOldStyleBTProBold/font.woff2") format("woff2"), url("/assets/webFonts/IowanOldStyleBTProBold/font.woff") format("woff");
 }
+* {
+  color: var(--text-color);
+}
+
 body {
   font-family: "Avenir Next", "Avenir Next LT Pro", "Avenir", "Futura", "Helvetica Neue", system-ui, sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--color-body-text);
+  --text-color: var(--color-body-text);
 }
 
 figcaption {
   font-size: 0.875rem;
   line-height: 1.2;
-  color: var(--color-body-text-dimmed);
+  --text-color: var(--color-body-text-dimmed);
   font-weight: 400;
   text-align: center;
 }
 
 strong, b {
-  color: var(--color-body-text-emphasized);
+  --text-color: var(--color-body-text-emphasized);
   font-weight: 600;
 }
 
@@ -149,7 +175,7 @@ em {
 h1, h2 {
   font-family: "IowanOldStyleBTProBold", ui-serif, serif;
   font-weight: bold;
-  color: var(--color-CI-1);
+  --text-color: var(--color-CI-1);
 }
 
 h1 {
@@ -166,11 +192,11 @@ h3, h4, h5 {
   font-weight: bold;
   font-size: 0.875rem;
   line-height: 1.1428;
-  color: var(--color-CI-1);
+  --text-color: var(--color-CI-1);
 }
 
 h4, h5 {
-  color: var(--color-body-text-dimmed);
+  --text-color: var(--color-body-text-dimmed);
 }
 
 h5 {
@@ -189,10 +215,10 @@ p, blockquote, ul, ol {
   margin-block: var(--space-M);
 }
 
-figure {
+figure, a[role=button], div.button {
   margin-block: var(--space-M);
 }
-main figure:first-child {
+main figure:first-child, main a[role=button]:first-child, main div.button:first-child {
   margin-block: 0 var(--space-M);
 }
 
@@ -237,15 +263,15 @@ header nav a {
   transition-timing-function: ease-out;
 }
 header nav a:link, header nav a:visited {
-  color: var(--color-body-text);
+  --text-color: var(--color-body-text);
 }
 header nav a:active, header nav a:hover, header nav a:focus {
-  color: var(--color-body-text-inverted);
+  --text-color: var(--color-body-text-inverted);
   background: var(--color-CI-1);
   transition-property: none;
 }
 header nav a:focus-visible {
-  color: var(--color-CI-1);
+  --text-color: var(--color-CI-1);
   background: var(--color-selected);
   outline: solid 2px var(--color-CI-2);
 }
@@ -265,20 +291,14 @@ a[href^=http]:not(nav a):not(a[href*="seeapotheke.de"], a[href*=localhost])::aft
   margin-inline-start: var(--space-S);
   -webkit-mask-image: url("/assets/icons/external-link.svg");
   mask-image: url("/assets/icons/external-link.svg");
-  background-color: var(--color-body-text);
-}
-a[href^=http]:not(nav a):link:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, a[href^=http]:not(nav a):visited:not(a[href*="seeapotheke.de"], a[href*=localhost])::after {
-  background-color: var(--color-CI-1);
-}
-a[href^=http]:not(nav a):active:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, a[href^=http]:not(nav a):hover:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, a[href^=http]:not(nav a):focus:not(a[href*="seeapotheke.de"], a[href*=localhost])::after, a[href^=http]:not(nav a):focus-visible:not(a[href*="seeapotheke.de"], a[href*=localhost])::after {
-  background-color: var(--color-CI-2);
+  background-color: var(--text-color);
 }
 
 a:link, a:visited {
-  color: var(--color-CI-1);
+  --text-color: var(--color-CI-1);
 }
 a:active, a:hover, a:focus, a:focus-visible {
-  color: var(--color-CI-2);
+  --text-color: var(--color-CI-2);
 }
 
 header nav a[href^=http]:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
@@ -293,13 +313,7 @@ header nav a[href^=http]:not(a[href*="seeapotheke.de"], a[href*=localhost]) span
   margin-inline-start: var(--space-S);
   -webkit-mask-image: url("/assets/icons/external-link.svg");
   mask-image: url("/assets/icons/external-link.svg");
-  background-color: var(--color-body-text);
-}
-header nav a[href^=http]:link:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a[href^=http]:active:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a[href^=http]:hover:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after, header nav a[href^=http]:focus:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
-  background-color: var(--color-body-text-inverted);
-}
-header nav a[href^=http]:focus-visible:not(a[href*="seeapotheke.de"], a[href*=localhost]) span::after {
-  background-color: var(--color-CI-1);
+  background-color: var(--text-color);
 }
 
 /*
@@ -352,10 +366,11 @@ main figure ~ .block_map-and-message {
   padding: var(--space-gap);
   border-radius: var(--radius-L);
   background-color: var(--color-CI-1);
-  color: var(--color-body-text-inverted);
+  --button-background: var(--color-CI-1-plus-10);
+  --text-color: var(--color-body-text-inverted);
 }
 .block_floating h1, .block_floating h2, .block_floating h3, .block_floating h4, .block_floating h5, .block_floating h6 {
-  color: var(--color-body-text-inverted);
+  --text-color: var(--color-body-text-inverted);
 }
 .block_floating h1:first-child, .block_floating h2:first-child, .block_floating h3:first-child, .block_floating h4:first-child, .block_floating h5:first-child, .block_floating h6:first-child {
   margin-block-start: 0;
@@ -370,10 +385,10 @@ main figure ~ .block_map-and-message {
   background-color: var(--color-CI-2);
 }
 .block_floating a:link, .block_floating a:visited {
-  color: var(--color-body-text-inverted);
+  --text-color: var(--color-body-text-inverted);
 }
 .block_floating a:active, .block_floating a:hover, .block_floating a:focus, .block_floating a:focus-visible {
-  color: var(--color-CI-2);
+  --text-color: var(--color-CI-2);
 }
 .block_floating.left {
   float: left;
@@ -389,6 +404,40 @@ main figure ~ .block_map-and-message {
   margin: 0 16.667% var(--space-gap) var(--space-gap);
 }
 
+/*
+ * Styles for Button elements — seeapotheke.de
+ */
+body {
+  --button-background: var(--color-CI-1);
+  --button-background-hover: var(--color-CI-3);
+}
+
+a[role=button], div.button {
+  --text-color: var(--color-body-text-inverted) !important;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  gap: var(--space-XS);
+  text-align: center;
+  text-decoration: none;
+  padding: var(--space-XS);
+  margin-block: var(--space-S);
+  background: var(--button-background);
+  border-radius: var(--radius-M);
+}
+a[role=button]:hover, a[role=button]:focus, a[role=button]:active, div.button:hover, div.button:focus, div.button:active {
+  background: var(--button-background-hover);
+}
+a[role=button] span.label, div.button span.label {
+  order: 2;
+}
+a[role=button] span.left, div.button span.left {
+  order: 1;
+}
+a[role=button] span.right, div.button span.right {
+  order: 3;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -396,7 +445,7 @@ img {
 
 pre {
   background: black;
-  color: white;
+  --text-color: white;
   padding: 1rem;
 }
 
