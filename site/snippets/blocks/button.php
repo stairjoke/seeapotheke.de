@@ -2,5 +2,5 @@
 	<?php if($icon = $block->icon()->toFile()): ?>
 		<span class="icon <?= $block->direction() ?>" style="--mask-url: url(<?= $icon->url() ?>)"><?= $icon->alt() ?></span>
 	<?php endif; ?>
-	<span><?= $block->text() ?></span>
+	<span class="label"><?= $block->text() ?></span>
 </a>
