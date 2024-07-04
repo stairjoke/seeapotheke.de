@@ -14,7 +14,7 @@ return [
 				'label' => 'Weitere Elemente',
 				'type' => 'group',
 				'fieldsets' => [
-					'video', 'line', 'table', 'maps-and-message', 'floating', 'button'
+					'video', 'line', 'table', 'maps-and-message', 'floating', 'button', 'appBlock'
 				]
 			],
 			'advanced' => [
