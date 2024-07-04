@@ -1,0 +1,26 @@
+name: App-Block
+icon: download
+preview: fields
+tabs:
+  content:
+    label: App-Block
+    icon: download
+    fields:
+      icon:
+        type: files
+        label: App-Ikone
+        max: 1
+        image:
+          ratio: 1/1
+      name:
+        type: text
+        label: App-Name
+      appStore:
+        type: url
+        label: Apple AppStore Link
+      playStore:
+        type: url
+        label: Google Playstore Link
+      info:
+        type: textarea
+        size: small
