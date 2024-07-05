@@ -3,7 +3,7 @@
  */
 
 a[href^="http"]:not(nav a) {
-  &:not(a[href*="seeapotheke.de"], a[href*="localhost"])::after {
+  &:not(a[href*="seeapotheke.de"], a[href*="localhost"], .noFlag)::after {
     display: inline-block;
     content: "Externer Link";
     overflow: hidden;
