@@ -107,3 +107,42 @@
     margin: 0 16.667% var(--space-gap) var(--space-gap);
   }
 }
+
+.appBlockWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-gap);
+}
+
+.appBlock {
+  flex-basis: 18.75rem;
+  margin-block: var(--space-L);
+
+  text-align: center;
+  & > img {
+    width: 5rem;
+    @include global-sass-variables.drop-shadow-PNG();
+  }
+  p {
+
+  }
+  div.links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-gap);
+    a {
+      flex-grow: 0;
+      flex-shrink: 1;
+      &.appStoreBanner {
+        flex-basis: 120px;
+      }
+      &.playStoreBanner {
+        flex-basis: 135px;
+      }
+      img {
+
+      }
+    }
+  }
+}

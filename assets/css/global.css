@@ -279,7 +279,7 @@ header nav a:focus-visible {
 /*
  * Link Styles for seeapotheke.de
  */
-a[href^=http]:not(nav a):not(a[href*="seeapotheke.de"], a[href*=localhost])::after {
+a[href^=http]:not(nav a):not(a[href*="seeapotheke.de"], a[href*=localhost], .noFlag)::after {
   display: inline-block;
   content: "Externer Link";
   overflow: hidden;
@@ -404,16 +404,50 @@ main figure ~ .block_map-and-message {
   margin: 0 16.667% var(--space-gap) var(--space-gap);
 }
 
+.appBlockWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-gap);
+}
+
+.appBlock {
+  flex-basis: 18.75rem;
+  margin-block: var(--space-L);
+  text-align: center;
+}
+.appBlock > img {
+  width: 5rem;
+  -webkit-filter: drop-shadow(0 0.25rem 1.25rem rgba(0, 0, 0, 0.08));
+  filter: drop-shadow(0 0.25rem 1.25rem rgba(0, 0, 0, 0.08));
+}
+.appBlock div.links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-gap);
+}
+.appBlock div.links a {
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+.appBlock div.links a.appStoreBanner {
+  flex-basis: 120px;
+}
+.appBlock div.links a.playStoreBanner {
+  flex-basis: 135px;
+}
 /*
  * Styles for Button elements — seeapotheke.de
  */
 body {
   --button-background: var(--color-CI-1);
-  --button-background-hover: var(--color-CI-3);
+  --button-background-hover: var(--color-paper);
 }
 
 a[role=button], div.button {
   --text-color: var(--color-body-text-inverted) !important;
+  border: solid 2px transparent;
+  box-sizing: border-box;
   display: flex;
   justify-items: center;
   justify-content: center;
@@ -427,6 +461,8 @@ a[role=button], div.button {
 }
 a[role=button]:hover, a[role=button]:focus, a[role=button]:active, div.button:hover, div.button:focus, div.button:active {
   background: var(--button-background-hover);
+  border: solid 2px var(--button-background);
+  --text-color: var(--color-CI-1) !important;
 }
 a[role=button] span.label, div.button span.label {
   order: 2;

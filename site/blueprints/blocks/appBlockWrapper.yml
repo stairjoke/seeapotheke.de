@@ -1,0 +1,12 @@
+name: Apps Block
+icon: grid-bottom
+tabs:
+  content:
+    label: Apps-Blöcke
+    icon: grid
+    fields:
+      apps:
+        label: Apps
+        type: blocks
+        fieldsets:
+          - appBlock
