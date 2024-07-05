@@ -51,8 +51,9 @@ body {
       }
     }
 
-    & > *:not(figure, img) {
-      max-width: 66.667%;
+    & > *:not(figure, img, .appBlockWrapper) {
+      max-width: 40rem;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
     }

@@ -50,8 +50,9 @@ body {
     padding-block: var(--space-L);
   }
 }
-.contain main > *:not(figure, img) {
-  max-width: 66.667%;
+.contain main > *:not(figure, img, .appBlockWrapper) {
+  max-width: 40rem;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -368,6 +369,7 @@ main figure ~ .block_map-and-message {
   background-color: var(--color-CI-1);
   --button-background: var(--color-CI-1-plus-10);
   --text-color: var(--color-body-text-inverted);
+  box-sizing: border-box;
 }
 .block_floating h1, .block_floating h2, .block_floating h3, .block_floating h4, .block_floating h5, .block_floating h6 {
   --text-color: var(--color-body-text-inverted);
@@ -392,16 +394,16 @@ main figure ~ .block_map-and-message {
 }
 .block_floating.left {
   float: left;
-  width: 25%;
-  margin: 0 var(--space-gap) var(--space-gap) 16.667%;
+  width: 25% !important;
+  margin: 0 var(--space-gap) var(--space-gap) 16.667% !important;
 }
 .block_floating.none {
-  margin-block: var(--space-M);
+  margin-block: var(--space-M) !important;
 }
 .block_floating.right {
   float: right;
-  width: 25%;
-  margin: 0 16.667% var(--space-gap) var(--space-gap);
+  width: 25% !important;
+  margin: 0 16.667% var(--space-gap) var(--space-gap) !important;
 }
 
 .appBlockWrapper {

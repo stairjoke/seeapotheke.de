@@ -93,18 +93,20 @@
     }
   }
 
+  box-sizing: border-box;
+
   &.left {
     float: left;
-    width: 25%;
-    margin: 0 var(--space-gap) var(--space-gap) 16.667%;
+    width: 25% !important;
+    margin: 0 var(--space-gap) var(--space-gap) 16.667% !important;
   }
   &.none {
-    margin-block: var(--space-M);
+    margin-block: var(--space-M) !important;
   }
   &.right {
     float: right;
-    width: 25%;
-    margin: 0 16.667% var(--space-gap) var(--space-gap);
+    width: 25% !important;
+    margin: 0 16.667% var(--space-gap) var(--space-gap) !important;
   }
 }
 
