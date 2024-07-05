@@ -9,3 +9,9 @@ $breakpoint-tablet-min: 960px;
 $breakpoint-tablet-max: 959px;
 $breakpoint-phone-min: 640px;
 $breakpoint-phone-max: 639px;
+
+// Shadows
+@mixin drop-shadow-PNG() {
+  -webkit-filter: drop-shadow(0 .25rem 1.25rem rgba(0,0,0,.08));
+  filter: drop-shadow(0 .25rem 1.25rem rgba(0,0,0,.08));
+}
