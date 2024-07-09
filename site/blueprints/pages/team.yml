@@ -16,6 +16,11 @@ columns:
             label: Oben
             type: blocks
             size: huge
+          nav:
+            type: info
+            label: Navigation
+            text: |
+              Die Navigation mit kleinen Bildern wird an dieser Stelle automatisch eingefügt.
           teamMembers:
             label: Mitarbeiter
             type: structure
