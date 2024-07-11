@@ -25,7 +25,7 @@
 #teamNav ol li a img {
   object-fit: cover;
   aspect-ratio: 1;
-  border-radius: var(--radius-L);
+  border-radius: var(--radius-XL);
   transition-duration: var(--transition-duration-M);
 }
 #teamNav ol:has(a:hover) img {
@@ -33,6 +33,16 @@
 }
 #teamNav ol:has(a:hover) a:hover img {
   transform: scale(1.1);
+}
+
+.teamPagePortrait {
+  margin: var(--space-L);
+  border-radius: var(--radius-XXL);
+  max-width: 33%;
+  float: left;
+}
+.teamPagePortrait.even {
+  float: right;
 }
 
 /*# sourceMappingURL=team.css.map */

@@ -11,11 +11,16 @@
 						<li><a href="#<?= Str::slug($member->headline()) ?>"><?= $member->photo()->toFile() ?></a></li>
 					<?php endforeach; ?>
 					</ol></nav>
-					<?php foreach($teamMembers as $member) : ?>
+					<?php
+					$even = false; //used to flag as odd/even nth image
+					foreach($teamMembers as $member) :
+						$image = $member->photo()->toFile(); ?>
+						<img alt="<?= $image->alt() ?>" src="<?= $image->crop(900,900)->url() ?>" class="teamPagePortrait<?= ($even) ? " even" : "" ?>" />
 						<h2 id="<?= Str::slug($member->headline()) ?>"><?= $member->headline() ?></h2>
-						<?= $member->photo()->toFile() ?>
 						<?= $member->text()->kt() ?>
-					<?php endforeach;
+					<?php
+					$even = ($even) ? false : true;
+					endforeach;
 				endif;
 			?>
 		</main>

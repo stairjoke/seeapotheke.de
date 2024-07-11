@@ -24,7 +24,7 @@
       img {
         object-fit: cover;
         aspect-ratio: 1;
-        border-radius: var(--radius-L);
+        border-radius: var(--radius-XL);
         transition-duration: var(--transition-duration-M);
       }
     }
@@ -37,5 +37,17 @@
     a:hover img {
       transform: scale(1.1);
     }
+  }
+}
+
+.teamPagePortrait {
+  // Images will always be prepared as squares -> Needs scrset for mobile
+  margin: var(--space-L);
+  border-radius: var(--radius-XXL);
+  max-width: 33%;
+  float: left;
+
+  &.even {
+    float: right;
   }
 }

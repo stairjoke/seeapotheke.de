@@ -72,6 +72,8 @@ body {
   --space-XL: 2rem;
   --radius-M: .5rem;
   --radius-L: 1rem;
+  --radius-XL: 1.5rem;
+  --radius-XXL: 5rem;
   --color-CI-1: #1E398F;
   --color-CI-1-plus-10: #3C59B4;
   --color-CI-2: #E30018;
