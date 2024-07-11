@@ -1,0 +1,38 @@
+/*
+ *
+ */
+/*
+ * - Global CSS Variables
+ */
+#teamNav ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  justify-content: flex-start;
+}
+#teamNav ol li {
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: calc(5rem + var(--space-gap));
+}
+#teamNav ol li a {
+  display: inline-block;
+  padding: calc(var(--space-gap) / 2);
+}
+#teamNav ol li a img {
+  object-fit: cover;
+  aspect-ratio: 1;
+  border-radius: var(--radius-L);
+  transition-duration: var(--transition-duration-M);
+}
+#teamNav ol:has(a:hover) img {
+  transform: scale(0.95);
+}
+#teamNav ol:has(a:hover) a:hover img {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=team.css.map */

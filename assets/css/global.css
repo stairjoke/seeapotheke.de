@@ -84,6 +84,8 @@ body {
   --color-body-text-emphasized: #000000;
   --color-body-text-inverted: #F5F5F5;
   --line-hair: 1px;
+  --transition-duration-S: 80ms;
+  --transition-duration-M: 250ms;
 }
 @media (min-resolution: 150dpi) {
   :root {
@@ -260,7 +262,7 @@ header nav a {
   border-radius: var(--radius-M);
   background: transparent;
   transition-property: background, color;
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration-M);
   transition-timing-function: ease-out;
 }
 header nav a:link, header nav a:visited {

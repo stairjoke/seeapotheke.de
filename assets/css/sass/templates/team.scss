@@ -1,0 +1,41 @@
+/*
+ *
+ */
+
+@use '../global-sass-variables';
+
+#teamNav ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0; //No gap, otherwise transform on hover effect flicker, use padding in a
+  justify-content: flex-start;
+
+  li {
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: calc(5rem + var(--space-gap));
+
+    a {
+      display: inline-block;
+      padding: calc(var(--space-gap)/2);
+      img {
+        object-fit: cover;
+        aspect-ratio: 1;
+        border-radius: var(--radius-L);
+        transition-duration: var(--transition-duration-M);
+      }
+    }
+  }
+
+  &:has(a:hover) {
+    img {
+      transform: scale(0.95);
+    }
+    a:hover img {
+      transform: scale(1.1);
+    }
+  }
+}
