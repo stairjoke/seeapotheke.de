@@ -37,7 +37,7 @@ header {
       background: transparent;
 
       transition-property: background, color;
-      transition-duration: 250ms;
+      transition-duration: var(--transition-duration-M);
       transition-timing-function: ease-out;
 
       &:link, &:visited {
