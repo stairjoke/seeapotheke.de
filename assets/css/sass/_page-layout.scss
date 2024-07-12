@@ -36,6 +36,14 @@ body {
   header {
     grid-column: header;
 
+    #priorityLink {
+      display: none;
+
+      @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
+        display: inline-block;
+      }
+    }
+
     #logo img {
       @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
         max-height: 3.75rem;
@@ -44,7 +52,12 @@ body {
     }
     #navBody {
       @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
-        display: none;
+        &.menuClosed {
+          display: none;
+        }
+        &.menuOpened {
+          display: block;
+        }
       }
     }
   }

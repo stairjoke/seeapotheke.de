@@ -37,6 +37,14 @@ body {
 .contain header {
   grid-column: header;
 }
+.contain header #priorityLink {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .contain header #priorityLink {
+    display: inline-block;
+  }
+}
 @media (max-width: 1023px) {
   .contain header #logo img {
     max-height: 3.75rem;
@@ -44,8 +52,11 @@ body {
   }
 }
 @media (max-width: 1023px) {
-  .contain header #navBody {
+  .contain header #navBody.menuClosed {
     display: none;
+  }
+  .contain header #navBody.menuOpened {
+    display: block;
   }
 }
 .contain main {

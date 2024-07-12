@@ -8,4 +8,18 @@
 			'assets/css/global.css',
 			'@auto' //https://getkirby.com/docs/reference/templates/helpers/css
 		]) ?>
+		<script>
+			function toggleMenu(){
+				let navBody = document.getElementById("navBody");
+				let open = (navBody.classList.contains('menuOpen')) ? true : false;
+
+				if(open) {
+					navBody.classList.remove('menuOpen');
+					navBody.classList.add('menuClosed');
+				}else{
+					navBody.classList.remove('menuClosed');
+					navBody.classList.add('menuOpen');
+				}
+			}
+		</script>
 	</head>

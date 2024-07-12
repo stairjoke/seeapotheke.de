@@ -3,8 +3,14 @@
 		<a href="<?= $site->url() ?>">
 			<?= $site->logo()->toFile() ?>
 		</a>
+		<?php
+			if($item = $site->pages()->listed()->nth(1)) : ?>
+				<a href="<?= $item->url() ?>" id="priorityLink"<?php echo ($item->isOpen()) ? 'class="current"' : ''; ?>>
+					<span class="label"><?= $item->title() ?></span>
+				</a>
+		<?php endif; ?>
 	</section>
-	<section id="navBody">
+	<section id="navBody" class="menuClosed">
 		<article>
 			<h2><?= t('openingHours') ?></h2>
 			<?php snippet('hours') ?>
@@ -34,4 +40,7 @@
 			?>
 		</article>
 	</section>
+	<div id="navControls">
+		<a role="button" onclick="toggleMenu()"><?= t('menu') ?></a>
+	</div>
 </header>
