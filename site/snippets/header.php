@@ -10,19 +10,19 @@
 		<a role="button" onclick="toggleMenu()" id="navControls"><?= t('menu') ?></a>
 	</section>
 	<section id="navBody" class="menuClosed">
-		<article>
+		<article class="order-2">
 			<h2><?= t('openingHours') ?></h2>
 			<?php snippet('hours') ?>
 		</article>
-		<article>
+		<article class="order-1">
 			<h3><?= $site->sidebarSectionNavigation() ?></h3>
 			<?php snippet('nav') ?>
 		</article>
-		<article>
+		<article class="order-4">
 			<h3><?= $site->sidebarSectionEmergencyServices() ?></h3>
 			<?php snippet('emergencyServices') ?>
 		</article>
-		<article>
+		<article class="order-5">
 			<h3><?= $site->sidebarSectionLegal() ?></h3>
 			<?php
 				if($items = $site->sidebarSectionLegalPages()->toPages()): ?>

@@ -24,3 +24,21 @@ pre {
   --text-color: white;
   padding: 1rem;
 }
+
+.order- {
+  &1 {
+    order: 1;
+  }
+  &2 {
+    order: 2;
+  }
+  &3 {
+    order: 3;
+  }
+  &4 {
+    order: 4;
+  }
+  &5 {
+    order: 5;
+  }
+}
