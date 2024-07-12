@@ -35,51 +35,6 @@ body {
 
   header {
     grid-column: header;
-
-    #priorityLink, #navControls {
-      display: none;
-
-      @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
-        display: inline-block;
-      }
-    }
-    @media(max-width: #{global-sass-variables.$breakpoint-phone-max}){
-      #priorityLink {
-        display: none;
-      }
-      #navControls {
-        margin-left: auto;
-      }
-    }
-
-    #main {
-      @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: var(--space-gap);
-
-        #priorityLink {
-          margin-left: auto;
-        }
-
-        img {
-          max-height: 3.75rem;
-          max-width: 100%;
-          width: auto;
-        }
-      }
-    }
-    #navBody {
-      @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
-        &.menuClosed {
-          display: none;
-        }
-        &.menuOpened {
-          display: block;
-        }
-      }
-    }
   }
 
   main {

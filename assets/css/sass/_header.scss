@@ -2,6 +2,8 @@
  * Details for Header/Sidebar on seeapotheke.de
  */
 
+@use 'global-sass-variables';
+
 header {
   border-right: var(--color-lines) solid var(--line-hair);
   border-left: var(--color-lines) solid var(--line-hair);
@@ -11,12 +13,14 @@ header {
     padding-inline: var(--space-gap);
     border-bottom: var(--color-lines) solid var(--line-hair);
 
-    article:first-child > *:first-child {
-      margin-top: 0;
-    }
+    @media (min-width: #{global-sass-variables.$breakpoint-desktop-min}) {
+      article:first-child > *:first-child {
+        margin-top: 0;
+      }
 
-    article:last-child > *:last-child {
-      margin-bottom: 0;
+      article:last-child > *:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -52,6 +56,88 @@ header {
         --text-color: var(--color-CI-1);
         background: var(--color-selected);
         outline: solid 2px var(--color-CI-2);
+      }
+    }
+  }
+
+  #priorityLink, #navControls {
+    display: none;
+
+    @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
+      display: inline-block;
+    }
+  }
+  @media(max-width: #{global-sass-variables.$breakpoint-phone-max}){
+    #priorityLink {
+      display: none;
+    }
+    #navControls {
+      margin-left: auto;
+    }
+  }
+
+  #main {
+    @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
+      height: 3.75rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: var(--space-gap);
+
+      #priorityLink {
+        margin-left: auto;
+      }
+
+      img {
+        max-height: 3.75rem;
+        max-width: 100%;
+        width: auto;
+      }
+    }
+  }
+  #navBody {
+    @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
+      position: absolute;
+      inset: calc(3.75rem + var(--space-L) * 2) 0 0 0;
+      z-index: 1;
+      background: var(--color-paper);
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: var(--space-gap);
+
+      & > article {
+        flex-basis: 12.5rem;
+        flex-grow: 1;
+
+        padding: var(--space-gap);
+        &.order-1 {
+          background: var(--color-selected);
+        }
+        &:not(.order-1) {
+          outline: solid 2px var(--color-selected);
+        }
+
+        border-radius: var(--radius-XL);
+
+        h2 {
+          font-family: unset;
+          font-weight: bold;
+          font-size: 0.875rem;
+          line-height: 1.1428;
+          --text-color: var(--color-CI-1);
+        }
+        h2, h3 {
+          margin-top: 0;
+        }
+      }
+
+      &.menuClosed {
+        display: none;
+      }
+      &.menuOpened {
+        display: block;
       }
     }
   }
