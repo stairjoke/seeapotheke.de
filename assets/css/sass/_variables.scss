@@ -2,6 +2,8 @@
  * Global Custom Properties for seeapotheke.de
  */
 
+@use 'global-sass-variables';
+
 :root {
 // Spacing
   --space-XS: .25rem;
@@ -10,6 +12,11 @@
   --space-gap: 1rem;
   --space-L: 1.5rem;
   --space-XL: 2rem;
+
+  @media (max-width: #{global-sass-variables.$breakpoint-phone-max}) {
+    --space-L: .75rem;
+    --space-XL: 1rem;
+  }
 
 // Radii
   --radius-M: .5rem;

@@ -5,52 +5,53 @@
 @use 'global-sass-variables';
 
 .block_map-and-message {
-	max-width: 100% !important;
-	display: flex;
-	@media (max-width: #{global-sass-variables.$breakpoint-phone-max}){
-		flex-direction: column;
-	}
-	gap: 0;
+  max-width: 100% !important;
+  display: flex;
+  @media (max-width: #{global-sass-variables.$breakpoint-phone-max}){
+	  flex-direction: column;
+  }
+  gap: 0;
 
-	margin-block: var(--space-M);
-	main figure~& {
-		margin-block: calc(var(--space-M) * (-1)) var(--space-M);
-	}
+  margin-block: var(--space-M);
+  main figure~& {
+	  margin-block: calc(var(--space-M) * (-1)) var(--space-M);
+  }
 
-	article {
-		order: 1;
-		flex-basis: 50%;
-		min-height: 200px;
-		padding: var(--space-gap);
+  article {
+	  order: 1;
+	  flex-basis: 50%;
+	  padding: var(--space-gap);
 
-		background-size: cover;
-		background-position: center center;
-		border-bottom: var(--color-lines) solid var(--line-hair);
-	}
+	  background-size: cover;
+	  background-position: center center;
+	  border-bottom: var(--color-lines) solid var(--line-hair);
+  }
 }
 
 .block_map-and-message_map {
-	order: 2;
-	position: relative;
+  order: 2;
+  position: relative;
+    min-height: 200px;
 
-	ul, li {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-	ul {
-		position: absolute;
-		inset: var(--space-gap);
+  ul, li {
+	  margin: 0;
+	  padding: 0;
+	  list-style: none;
+  }
+  ul {
+	  position: absolute;
+	  inset: var(--space-gap);
 
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: var(--space-gap);
-		justify-content: center;
-	}
+	  display: flex;
+	  flex-direction: row;
+	  align-items: center;
+	  gap: var(--space-gap);
+	  justify-content: center;
+  }
 }
 
 .block_floating {
+  min-width: 12.5rem;
   padding: var(--space-gap);
   border-radius: var(--radius-L);
 
@@ -98,7 +99,7 @@
   &.left {
     float: left;
     width: 25% !important;
-    margin: 0 var(--space-gap) var(--space-gap) 16.667% !important;
+    margin: 0 var(--space-gap) var(--space-gap) var(--space-gap) !important;
   }
   &.none {
     margin-block: var(--space-M) !important;
@@ -106,7 +107,15 @@
   &.right {
     float: right;
     width: 25% !important;
-    margin: 0 16.667% var(--space-gap) var(--space-gap) !important;
+    margin: 0 var(--space-gap) var(--space-gap) var(--space-gap) !important;
+  }
+
+  @container main (width < 25rem){
+    &.left, &.right {
+      float: none;
+      width: unset !important;
+      margin: var(--space-gap) !important;
+    }
   }
 }
 

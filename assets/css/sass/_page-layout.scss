@@ -43,19 +43,23 @@ body {
   }
 
   main {
+    container-type: inline-size;
+    container-name: main;
     grid-column: main;
 
     @media (max-width: #{global-sass-variables.$breakpoint-tablet-max}) {
       & > *:not(figure, img) {
-        padding-block: var(--space-L);
+        margin-block: var(--space-L);
       }
     }
 
-    & > *:not(figure, img, .appBlockWrapper) {
+    & > *:not(figure, img, .appBlockWrapper, .block_map-and-message) {
       max-width: 40rem;
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
+      margin-inline: auto;
+
+      @container main (width < 42rem){
+        margin-inline: var(--space-gap);
+      }
     }
     & > figure, & > img {
       width: 100%;
