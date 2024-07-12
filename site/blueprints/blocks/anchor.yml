@@ -1,0 +1,20 @@
+name: Anker-Links
+icon: anchor
+tabs:
+  content:
+    name: Anker
+    icon: anchor
+    fields:
+      info:
+        label: Information
+        type: info
+        text: |
+          Anker-Links sind Punkte auf einer Webseite, auf die direkt verlinkt werden kann. Sobald ein Anker gesetzt ist, kann auf diesen verwiesen werden, indem ein #Anker an die Adresse angefügt wird.
+
+          **Beispiel:**
+          Ist auf der Seite `https://seeapotheke.de/beispielSeite` der Anker mit den Namen `beispielAnker` gesetzt, so kann die folgende URL genutzt werden: `https://seeapotheke.de/beispielSeite#beispielAnker`. Beim Aufrufen dieser URL scrollt der browser dann automatisch bis zum Anker. So kann beispielsweise direkt zu einer bestimmten Überschrift verlinkt werden.
+      anchor:
+        type: slug
+        label: Anker-Name
+        help: |
+          Es dürfen nur die Buchstaben a-z und A-Z, sowie Zahlen genutzt werden. Sonderzeichen wie @ oder # haben bereits eine reservierte Funktion.

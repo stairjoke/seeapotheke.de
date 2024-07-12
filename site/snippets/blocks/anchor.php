@@ -1,0 +1,1 @@
+<span class="anchor" id="<?= $block->anchor() ?>"></span>

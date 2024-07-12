@@ -22,7 +22,7 @@ return [
 				'type' => 'group',
 				'open' => false,
 				'fieldsets' => [
-					'markdown', 'code'
+					'markdown', 'code', 'anchor'
 				]
 			]
 		]
