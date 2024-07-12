@@ -36,9 +36,16 @@ body {
   header {
     grid-column: header;
 
-    @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
-      min-height: 3.75rem;
-      //position: sticky;
+    #logo img {
+      @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
+        max-height: 3.75rem;
+        width: auto;
+      }
+    }
+    #navBody {
+      @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
+        display: none;
+      }
     }
   }
 

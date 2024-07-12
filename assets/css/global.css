@@ -38,23 +38,34 @@ body {
   grid-column: header;
 }
 @media (max-width: 1023px) {
-  .contain header {
-    min-height: 3.75rem;
+  .contain header #logo img {
+    max-height: 3.75rem;
+    width: auto;
+  }
+}
+@media (max-width: 1023px) {
+  .contain header #navBody {
+    display: none;
   }
 }
 .contain main {
+  container-type: inline-size;
+  container-name: main;
   grid-column: main;
 }
 @media (max-width: 959px) {
   .contain main > *:not(figure, img) {
-    padding-block: var(--space-L);
+    margin-block: var(--space-L);
   }
 }
-.contain main > *:not(figure, img, .appBlockWrapper) {
+.contain main > *:not(figure, img, .appBlockWrapper, .block_map-and-message) {
   max-width: 40rem;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
+}
+@container main (width < 42rem) {
+  .contain main > *:not(figure, img, .appBlockWrapper, .block_map-and-message) {
+    margin-inline: var(--space-gap);
+  }
 }
 .contain main > figure, .contain main > img {
   width: 100%;
@@ -88,6 +99,12 @@ body {
   --line-hair: 1px;
   --transition-duration-S: 80ms;
   --transition-duration-M: 250ms;
+}
+@media (max-width: 639px) {
+  :root {
+    --space-L: .75rem;
+    --space-XL: 1rem;
+  }
 }
 @media (min-resolution: 150dpi) {
   :root {
@@ -159,6 +176,11 @@ body {
   line-height: 1.5;
   --text-color: var(--color-body-text);
 }
+@media (max-width: 959px) {
+  body {
+    line-height: 1.25;
+  }
+}
 
 figcaption {
   font-size: 0.875rem;
@@ -190,7 +212,6 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  line-height: 1.5;
 }
 
 h3, h4, h5 {
@@ -341,7 +362,6 @@ main figure ~ .block_map-and-message {
 .block_map-and-message article {
   order: 1;
   flex-basis: 50%;
-  min-height: 200px;
   padding: var(--space-gap);
   background-size: cover;
   background-position: center center;
@@ -351,6 +371,7 @@ main figure ~ .block_map-and-message {
 .block_map-and-message_map {
   order: 2;
   position: relative;
+  min-height: 200px;
 }
 .block_map-and-message_map ul, .block_map-and-message_map li {
   margin: 0;
@@ -368,6 +389,7 @@ main figure ~ .block_map-and-message {
 }
 
 .block_floating {
+  min-width: 12.5rem;
   padding: var(--space-gap);
   border-radius: var(--radius-L);
   background-color: var(--color-CI-1);
@@ -399,7 +421,7 @@ main figure ~ .block_map-and-message {
 .block_floating.left {
   float: left;
   width: 25% !important;
-  margin: 0 var(--space-gap) var(--space-gap) 16.667% !important;
+  margin: 0 var(--space-gap) var(--space-gap) var(--space-gap) !important;
 }
 .block_floating.none {
   margin-block: var(--space-M) !important;
@@ -407,7 +429,14 @@ main figure ~ .block_map-and-message {
 .block_floating.right {
   float: right;
   width: 25% !important;
-  margin: 0 16.667% var(--space-gap) var(--space-gap) !important;
+  margin: 0 var(--space-gap) var(--space-gap) var(--space-gap) !important;
+}
+@container main (width < 25rem) {
+  .block_floating.left, .block_floating.right {
+    float: none;
+    width: unset !important;
+    margin: var(--space-gap) !important;
+  }
 }
 
 .appBlockWrapper {
