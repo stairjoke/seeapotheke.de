@@ -1,6 +1,8 @@
 <header>
 	<section id="logo">
-		<?= $site->logo()->toFile() ?>
+		<a href="<?= $site->url() ?>">
+			<?= $site->logo()->toFile() ?>
+		</a>
 	</section>
 	<section id="navBody">
 		<article>
