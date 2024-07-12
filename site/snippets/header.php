@@ -9,6 +9,9 @@
 					<span class="label"><?= $item->title() ?></span>
 				</a>
 		<?php endif; ?>
+		<div id="navControls">
+			<a role="button" onclick="toggleMenu()"><?= t('menu') ?></a>
+		</div>
 	</section>
 	<section id="navBody" class="menuClosed">
 		<article>
@@ -40,7 +43,4 @@
 			?>
 		</article>
 	</section>
-	<div id="navControls">
-		<a role="button" onclick="toggleMenu()"><?= t('menu') ?></a>
-	</div>
 </header>
