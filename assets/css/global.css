@@ -45,8 +45,25 @@ body {
     display: inline-block;
   }
 }
+@media (max-width: 639px) {
+  .contain header #priorityLink {
+    display: none;
+  }
+  .contain header #navControls {
+    margin-left: auto;
+  }
+}
 @media (max-width: 1023px) {
-  .contain header #logo img {
+  .contain header #main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-gap);
+  }
+  .contain header #main #priorityLink {
+    margin-left: auto;
+  }
+  .contain header #main img {
     max-height: 3.75rem;
     max-width: 100%;
     width: auto;

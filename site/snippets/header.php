@@ -1,17 +1,13 @@
 <header>
-	<section id="logo">
+	<section id="main">
 		<a href="<?= $site->url() ?>">
 			<?= $site->logo()->toFile() ?>
 		</a>
 		<?php
 			if($item = $site->pages()->listed()->nth(1)) : ?>
-				<a href="<?= $item->url() ?>" id="priorityLink"<?php echo ($item->isOpen()) ? 'class="current"' : ''; ?>>
-					<span class="label"><?= $item->title() ?></span>
-				</a>
+		<a href="<?= $item->url() ?>" id="priorityLink"<?php echo ($item->isOpen()) ? 'class="current"' : ''; ?>><?= $item->title() ?></a>
 		<?php endif; ?>
-		<div id="navControls">
-			<a role="button" onclick="toggleMenu()"><?= t('menu') ?></a>
-		</div>
+		<a role="button" onclick="toggleMenu()" id="navControls"><?= t('menu') ?></a>
 	</section>
 	<section id="navBody" class="menuClosed">
 		<article>

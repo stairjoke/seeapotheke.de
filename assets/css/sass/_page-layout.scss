@@ -43,12 +43,31 @@ body {
         display: inline-block;
       }
     }
+    @media(max-width: #{global-sass-variables.$breakpoint-phone-max}){
+      #priorityLink {
+        display: none;
+      }
+      #navControls {
+        margin-left: auto;
+      }
+    }
 
-    #logo img {
+    #main {
       @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
-        max-height: 3.75rem;
-        max-width: 100%;
-        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--space-gap);
+
+        #priorityLink {
+          margin-left: auto;
+        }
+
+        img {
+          max-height: 3.75rem;
+          max-width: 100%;
+          width: auto;
+        }
       }
     }
     #navBody {
