@@ -1,5 +1,5 @@
-<header>
-	<section id="main">
+<header id="mainMenu" class="menuClosed">
+	<section id="titlebar">
 		<a href="<?= $site->url() ?>">
 			<?= $site->logo()->toFile() ?>
 		</a>
@@ -9,7 +9,7 @@
 		<?php endif; ?>
 		<a role="button" onclick="toggleMenu()" id="navControls"><?= t('menu') ?></a>
 	</section>
-	<section id="navBody" class="menuClosed">
+	<section id="navBody">
 		<article class="order-2">
 			<h2><?= t('openingHours') ?></h2>
 			<?php snippet('hours') ?>

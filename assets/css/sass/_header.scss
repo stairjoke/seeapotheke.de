@@ -4,6 +4,14 @@
 
 @use 'global-sass-variables';
 
+@media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
+  body:has(header.menuOpened) .contain {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+}
+
 header {
   border-right: var(--color-lines) solid var(--line-hair);
   border-left: var(--color-lines) solid var(--line-hair);
@@ -76,13 +84,15 @@ header {
     }
   }
 
-  #main {
-    @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
+  @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
+    #titlebar {
       height: 3.75rem;
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: var(--space-gap);
+
+      background: var(--color-paper);
 
       #priorityLink {
         margin-left: auto;
@@ -94,31 +104,41 @@ header {
         width: auto;
       }
     }
-  }
-  #navBody {
-    @media (max-width: #{global-sass-variables.$breakpoint-desktop-max}) {
-      position: absolute;
-      inset: calc(3.75rem + var(--space-L) * 2) 0 0 0;
-      z-index: 1;
-      overflow-y: scroll;
-      background: var(--color-paper);
 
+    &.menuClosed {
+      #navBody {
+        display: none;
+      }
+    }
+
+    &.menuOpened {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      overflow: scroll;
+      padding-bottom: env(safe-area-inset-bottom);
+
+      background: var(--color-selected);
+
+      #navBody {
+        display: flex;
+      }
+    }
+
+    #navBody {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       gap: var(--space-gap);
+
+      background: var(--color-paper);
 
       & > article {
         flex-basis: 12.5rem;
         flex-grow: 1;
 
         padding: var(--space-gap);
-        &.order-1 {
-          background: var(--color-selected);
-        }
-        &:not(.order-1) {
-          outline: solid 2px var(--color-selected);
-        }
+        outline: solid 2px var(--color-selected);
 
         border-radius: var(--radius-XL);
 
@@ -132,13 +152,6 @@ header {
         h2, h3 {
           margin-top: 0;
         }
-      }
-
-      &.menuClosed {
-        display: none;
-      }
-      &.menuOpened {
-        display: block;
       }
     }
   }

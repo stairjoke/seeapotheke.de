@@ -10,15 +10,15 @@
 		]) ?>
 		<script>
 			function toggleMenu(){
-				let navBody = document.getElementById("navBody");
-				let open = (navBody.classList.contains('menuOpen')) ? true : false;
+				let mainMenu = document.getElementById("mainMenu");
+				let open = (mainMenu.classList.contains('menuOpened')) ? true : false;
 
 				if(open) {
-					navBody.classList.remove('menuOpen');
-					navBody.classList.add('menuClosed');
+					mainMenu.classList.remove('menuOpened');
+					mainMenu.classList.add('menuClosed');
 				}else{
-					navBody.classList.remove('menuClosed');
-					navBody.classList.add('menuOpen');
+					mainMenu.classList.remove('menuClosed');
+					mainMenu.classList.add('menuOpened');
 				}
 			}
 		</script>
