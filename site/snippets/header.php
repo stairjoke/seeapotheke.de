@@ -7,7 +7,10 @@
 			if($item = $site->pages()->listed()->nth(1)) : ?>
 		<a href="<?= $item->url() ?>" id="priorityLink"<?php echo ($item->isOpen()) ? 'class="current"' : ''; ?>><?= $item->title() ?></a>
 		<?php endif; ?>
-		<a role="button" onclick="toggleMenu()" id="navControls"><?= t('menu') ?></a>
+		<a role="button" onclick="toggleMenu()" id="navControls">
+			<span class="icon right" style="--mask-url: url('/assets/img/burger.svg')">Menü ein-oder ausblenden.</span>
+			<span class="label"><?= t('menu') ?></span>
+		</a>
 	</section>
 	<section id="navBody">
 		<article class="order-2">

@@ -13,7 +13,8 @@ a[role=button], div.button {
   box-sizing: border-box;
 
   display: flex;
-  justify-items: center;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
   gap: var(--space-XS);
 
@@ -31,13 +32,16 @@ a[role=button], div.button {
     --text-color: var(--color-CI-1) !important;
   }
 
+  //Label
   span.label {
-    order: 2;
-  }
-  span.left {
     order: 1;
   }
+
+  //Icon
+  span.left {
+    order: 0;
+  }
   span.right {
-    order: 3;
+    order: 2;
   }
 }

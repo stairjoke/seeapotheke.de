@@ -25,13 +25,10 @@ img.icon, svg.icon {
 span.icon {
   width: 1em;
   height: 1em;
+  overflow: hidden;
   display: inline-block;
   color: transparent;
   background-color: var(--text-color);
   -webkit-mask-image: var(--mask-url); //Can’t use `--data-url=""` with `attr(data-url url)`, it’s not supported yet.
   mask-image: var(--mask-url);
-}
-
-.icon {
-  transform: translateY(.2em);
 }
