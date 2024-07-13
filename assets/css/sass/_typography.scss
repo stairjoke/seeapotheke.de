@@ -59,7 +59,7 @@ em {
 
 h1, h2 {
   font-family: "IowanOldStyleBTProBold", ui-serif, serif;
-  font-weight: bold;
+  font-weight: normal; //The font is already bold and Safari will try to invent an even bolder version if this is set to bold. If No font is loaded, the headlines will use the non-bold version of the system font. To detect if the font was loaded JS would be required.
   --text-color: var(--color-CI-1);
 }
 

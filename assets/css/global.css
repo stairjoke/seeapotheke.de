@@ -198,7 +198,7 @@ em {
 
 h1, h2 {
   font-family: "IowanOldStyleBTProBold", ui-serif, serif;
-  font-weight: bold;
+  font-weight: normal;
   --text-color: var(--color-CI-1);
 }
 
