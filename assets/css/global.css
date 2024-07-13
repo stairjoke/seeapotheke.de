@@ -60,6 +60,12 @@ body {
   width: 100%;
 }
 
+footer img {
+  display: block;
+  transform-origin: top center;
+  transform: scale(1.01);
+}
+
 /*
  * Global Custom Properties for seeapotheke.de
  */
@@ -104,6 +110,11 @@ body {
 /*
  * Media Stylesheet for seeapotheke.de
  */
+img {
+  width: 100%;
+  height: auto;
+}
+
 figure {
   margin: 0;
   padding: 0;
@@ -244,6 +255,13 @@ figcaption {
 /*
  * Details for Header/Sidebar on seeapotheke.de
  */
+@media (max-width: 1023px) {
+  body:has(header.menuOpened) .contain {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+}
 header {
   border-right: var(--color-lines) solid var(--line-hair);
   border-left: var(--color-lines) solid var(--line-hair);
@@ -309,45 +327,49 @@ header #priorityLink, header #navControls {
   }
 }
 @media (max-width: 1023px) {
-  header #main {
+  header #titlebar {
     height: 3.75rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: var(--space-gap);
+    background: var(--color-paper);
   }
-  header #main #priorityLink {
+  header #titlebar #priorityLink {
     margin-left: auto;
   }
-  header #main img {
+  header #titlebar img {
     max-height: 3.75rem;
     max-width: 100%;
     width: auto;
   }
-}
-@media (max-width: 1023px) {
-  header #navBody {
+  header.menuClosed #navBody {
+    display: none;
+  }
+  header.menuOpened {
     position: absolute;
-    inset: calc(3.75rem + var(--space-L) * 2) 0 0 0;
+    inset: 0;
     z-index: 1;
-    overflow-y: scroll;
-    background: var(--color-paper);
+    overflow: scroll;
+    padding-bottom: env(safe-area-inset-bottom);
+    background: var(--color-selected);
+  }
+  header.menuOpened #navBody {
+    display: flex;
+  }
+  header #navBody {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--space-gap);
+    background: var(--color-paper);
   }
   header #navBody > article {
     flex-basis: 12.5rem;
     flex-grow: 1;
     padding: var(--space-gap);
-    border-radius: var(--radius-XL);
-  }
-  header #navBody > article.order-1 {
-    background: var(--color-selected);
-  }
-  header #navBody > article:not(.order-1) {
     outline: solid 2px var(--color-selected);
+    border-radius: var(--radius-XL);
   }
   header #navBody > article h2 {
     font-family: unset;
@@ -358,12 +380,6 @@ header #priorityLink, header #navControls {
   }
   header #navBody > article h2, header #navBody > article h3 {
     margin-top: 0;
-  }
-  header #navBody.menuClosed {
-    display: none;
-  }
-  header #navBody.menuOpened {
-    display: block;
   }
 }
 
@@ -574,9 +590,8 @@ a[role=button] span.right, div.button span.right {
   order: 3;
 }
 
-img {
-  width: 100%;
-  height: auto;
+body {
+  background: var(--color-paper);
 }
 
 pre {

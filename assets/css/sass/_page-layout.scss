@@ -61,3 +61,11 @@ body {
     }
   }
 }
+
+footer {
+  img {
+    display: block;
+    transform-origin: top center;
+    transform: scale(1.01);
+  }
+}
