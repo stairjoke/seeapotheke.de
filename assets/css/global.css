@@ -311,6 +311,7 @@ header nav a:focus-visible {
   outline: solid 2px var(--color-CI-2);
 }
 header #priorityLink, header #navControls {
+  font-weight: 500;
   display: none;
 }
 @media (max-width: 1023px) {
@@ -363,6 +364,7 @@ header #priorityLink, header #navControls {
     flex-wrap: wrap;
     gap: var(--space-gap);
     background: var(--color-paper);
+    font-weight: 500;
   }
   header #navBody > article {
     flex-basis: 12.5rem;
