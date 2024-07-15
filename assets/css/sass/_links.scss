@@ -3,7 +3,7 @@
  */
 
 a[href^="http"]:not(nav a) {
-  &:not(a[href*="seeapotheke.de"], a[href*="localhost"], .noFlag)::after {
+  &:not(a[href*="seeapotheke.de"], a[href*="localhost"], a[href*="wp10614520"] .noFlag)::after {
     display: inline-block;
     content: "Externer Link";
     overflow: hidden;
@@ -34,7 +34,7 @@ a {
 
 header nav {
   a[href^="http"] {
-    &:not(a[href*="seeapotheke.de"], a[href*="localhost"]) {
+    &:not(a[href*="seeapotheke.de"], a[href*="localhost"], a[href*="wp10614520") {
       span::after {
         display: inline-block;
         content: "Externer Link";
