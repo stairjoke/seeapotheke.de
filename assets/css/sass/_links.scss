@@ -34,7 +34,7 @@ a {
 
 header nav {
   a[href^="http"] {
-    &:not(a[href*="seeapotheke.de"], a[href*="localhost"], a[href*="wp10614520") {
+    &:not(a[href*="seeapotheke.de"], a[href*="localhost"], a[href*="wp10614520"]) {
       span::after {
         display: inline-block;
         content: "Externer Link";
