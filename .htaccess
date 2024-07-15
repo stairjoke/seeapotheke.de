@@ -1,6 +1,22 @@
 # Kirby .htaccess
 # revision 2023-07-22
 
+# LEGACY REDIRECTS
+
+Redirect /bewerben /stellen
+Redirect /apps /vorbestellen#apps
+
+Redirect /bestellen /vorbestellen
+Redirect /gastvz /
+Redirect /kontakt /
+Redirect /umbau /
+Redirect /adventsz /
+Redirect /weihnacht /
+Redirect /umzug /
+Redirect /stadionheft2018 /
+
+# /LEGACY REDIRECTS
+
 # rewrite rules
 <IfModule mod_rewrite.c>
 
