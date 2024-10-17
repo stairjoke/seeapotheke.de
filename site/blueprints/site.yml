@@ -67,7 +67,17 @@ tabs:
           standbyService:
             type: fields
             fields:
+              standbyServiceEnable:
+                label: Notdienste in der Navigation anzeigen
+                type: toggle
+                help: |
+                  Wenn diese Funktion deaktiviert ist, werden keine Notdienste in der Navigation der Webseite angezeigt. Externe Notdienst-Seiten werden dennoch eingeblendet.
+                text:
+                  - Keine Notdienste in der Navigation
+                  - Notdienste anzeigen
               standbyService:
+                when:
+                  standbyServiceEnable: true
                 label: Notdienste
                 type: structure
                 help: Um alle Einträge zu löschen, klicke auf "…" rechts von "⊕ Hinzufügen" und wähle "Alle Löschen"
@@ -95,16 +105,20 @@ tabs:
                     help: |
                       Die Telefonnumer wird auf Smartphones, iPads, Macs und manchen Windows-Computern automatisch zum anklickbaren Link, vorausgesetzt sie ist wie folgt formatiert: **08382 26866** (mit einem einfachen Leerzeichen zwischen Vorwahl und Rufnummer).
               standbyServiceAutoUpdate:
+                when:
+                  standbyServiceEnable: true
                 label: Notdienst Update
                 help: |
                   Zuletzt automatisch aktualisiert: {{site.StandbyServiceLastUpdate.isNotEmpty ? site.StandbyServiceLastUpdate.toDate('d.m.Y H:m') : "nie."}} [Jetzt&nbsp;aktualisieren](javascript:window.alert("Click"))
                 type: toggle
+                default: true
                 text:
                   - Nicht automatisch aktualisieren
                   - Automatisch aktualisieren
               standbyServiceInfo:
                 when:
                   standbyServiceAutoUpdate: true
+                  standbyServiceEnable: true
                 label: Über automatische Notdienste
                 type: info
                 text: |
